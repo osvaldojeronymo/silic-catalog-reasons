@@ -1,0 +1,630 @@
+{
+  "versao": "2025-08-11",
+  "i18n": ["pt-BR", "en-US"],
+  "motivos": [
+    {
+      "code": "IMPED_VEDACAO_3_2_1",
+      "categoria": "Impedimentos",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Fornecedor com vedação/impedimento para contratar",
+        "en-US": "Supplier barred/ineligible to contract"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Consta impedimento/vedação. Regularize para prosseguir.",
+          "en-US": "Bar/ineligibility found. Please regularize to proceed."
+        },
+        "ci": {
+          "pt-BR": "Identificamos vedação/impedimento (suspensão, inidoneidade, participação de empregado/dirigente, etc.). Encaminhar comprovação de regularização ou substituição do proponente.",
+          "en-US": "We identified a bar/ineligibility (suspension, debarment, staff/board involvement, etc.). Provide proof of remediation or change of supplier."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "Vedações do AD200, 3.2.1; verificação obrigatória antes da contratação.",
+        "en-US": "Bars and ineligibilities per AD200, 3.2.1; mandatory pre-award check."
+      },
+      "references": ["AD200 v0.32 – 3.2.1"]
+    },
+    {
+      "code": "NEPOTISMO_3_2_2_3",
+      "categoria": "Impedimentos",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Risco de nepotismo/relacionamento vedado",
+        "en-US": "Nepotism/related-party restriction risk"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Indício de nepotismo. Anexe declaração e ajuste o quadro.",
+          "en-US": "Possible nepotism. Attach declaration and adjust parties."
+        },
+        "ci": {
+          "pt-BR": "Há indício de parentesco até 3º grau/empregado/dirigente. Exigir Declaração de Vedação ao Nepotismo e consulta no SILIC.",
+          "en-US": "Indication of kinship up to 3rd degree/staff/board. Require anti-nepotism declaration and SILIC check."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.2.2 e 3.2.3; procedimentos AD020 (consulta SILIC).",
+        "en-US": "AD200 3.2.2 and 3.2.3; AD020 procedures (SILIC check)."
+      },
+      "references": ["AD200 v0.32 – 3.2.2", "AD200 v0.32 – 3.2.3", "AD020 (SILIC – Nepotismo)"]
+    },
+    {
+      "code": "LISTAS_RESTRITIVAS_3_2_4",
+      "categoria": "Impedimentos",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Listas restritivas (setor público/trabalho escravo/risco de imagem)",
+        "en-US": "Restrictive lists (public sector/forced labor/reputational risk)"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Registro impeditivo em lista restritiva. Regularize.",
+          "en-US": "Blocking record on a restrictive list. Remediate."
+        },
+        "ci": {
+          "pt-BR": "Consta proibição de contratar com o Setor Público, registro de empregador de trabalho escravo ou lista de risco de imagem (PLD/FTP).",
+          "en-US": "Record of public contracting ban, forced-labor list, or reputational risk (AML/CFT)."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.2.4; AD006/PO006 (PLD/FTP).",
+        "en-US": "AD200 3.2.4; AD006/PO006 (AML/CFT)."
+      },
+      "references": ["AD200 v0.32 – 3.2.4", "AD006", "PO006"]
+    },
+    {
+      "code": "REG_ASSINATURA_CERTIDOES_3_4_1",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Certidões vencidas/irregulares na assinatura",
+        "en-US": "Expired/irregular certificates at signing"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Atualize as certidões para assinatura do instrumento.",
+          "en-US": "Update certificates for contract signing."
+        },
+        "ci": {
+          "pt-BR": "Certidões vencidas/irregulares devem ser regularizadas no ato da assinatura. Informar o proponente na convocação.",
+          "en-US": "Expired/irregular certificates must be regularized at signing. Inform supplier upon call for signature."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.4.1.2 e 3.4.1.3.",
+        "en-US": "AD200 3.4.1.2 and 3.4.1.3."
+      },
+      "references": ["AD200 v0.32 – 3.4.1.2", "AD200 v0.32 – 3.4.1.3"]
+    },
+    {
+      "code": "REG_FISCAL_FGTS_3_4_2",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Regularidade fiscal/FGTS não comprovada",
+        "en-US": "Tax/FGTS compliance not evidenced"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe CND/CPEND e CRF/FGTS (quando aplicável).",
+          "en-US": "Attach tax clearance and FGTS certificates (when applicable)."
+        },
+        "ci": {
+          "pt-BR": "Comprovação de regularidade fiscal (PF/PJ) e CRF/FGTS (PJ), ressalvadas as exceções para comodato/cessão administrativa.",
+          "en-US": "Tax compliance (PF/PJ) and FGTS (PJ) required, except for administrative cession/commodatum exceptions."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.4.2.1; 3.5.4.1.3; 3.5.4.2.4; 3.5.4.2.5; 3.5.4.2.7.",
+        "en-US": "AD200 3.4.2.1; 3.5.4.1.3; 3.5.4.2.4; 3.5.4.2.5; 3.5.4.2.7."
+      },
+      "references": ["AD200 v0.32 – 3.4.2.1", "AD200 v0.32 – 3.5.4"]
+    },
+    {
+      "code": "CADIN_3_4_4",
+      "categoria": "Impedimentos",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Ocorrência no CADIN",
+        "en-US": "Record found in CADIN"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Ocorrência no CADIN impede a contratação.",
+          "en-US": "CADIN record blocks contracting."
+        },
+        "ci": {
+          "pt-BR": "Apresentar comprovante de regularização/baixa no CADIN para prosseguimento.",
+          "en-US": "Provide evidence of CADIN clearance to proceed."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "Consulta e impedimento CADIN (locação/cessão com ônus).",
+        "en-US": "CADIN check and bar (lease/onerous cession)."
+      },
+      "references": ["AD200 v0.32 – 3.4.4.1", "AD200 v0.32 – 3.4.4.2", "AD020"]
+    },
+    {
+      "code": "PARTES_RELACIONADAS_3_4_3",
+      "categoria": "Jurídico",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Parte Relacionada sem tratamento devido",
+        "en-US": "Related party without required treatment"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Indício de Parte Relacionada. Anexe análises/anuências.",
+          "en-US": "Possible related party. Attach analyses/approvals."
+        },
+        "ci": {
+          "pt-BR": "Consultar CR464, comunicar área gestora e comprovar aderência à PO048; incluir argumentos no pedido de autorização.",
+          "en-US": "Check CR464, inform managing area, show adherence to PO048; include rationale in authorization request."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.4.3; CR464; PO048.",
+        "en-US": "AD200 3.4.3; CR464; PO048."
+      },
+      "references": ["AD200 v0.32 – 3.4.3", "CR464", "PO048"]
+    },
+    {
+      "code": "JUSTIFICATIVA_INCOMPLETA_3_5_1",
+      "categoria": "Processual",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Justificativa da contratação incompleta/ausente",
+        "en-US": "Incomplete/missing justification for contracting"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Complete a justificativa (necessidade, escolha, custo/benefício).",
+          "en-US": "Complete the justification (need, site choice, cost/benefit)."
+        },
+        "ci": {
+          "pt-BR": "Faltam manifestações GEFIC/GELOG, laudo, RTA e/ou hipótese de dispensa, conforme o caso.",
+          "en-US": "Missing GEFIC/GELOG statements, valuation report, RTA and/or waiver grounds, as applicable."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.1 (itens 3.5.1.1 a 3.5.1.8).",
+        "en-US": "AD200 3.5.1 (items 3.5.1.1–3.5.1.8)."
+      },
+      "references": ["AD200 v0.32 – 3.5.1"]
+    },
+    {
+      "code": "LAUDO_AVALIACAO_AUSENTE_3_5_2",
+      "categoria": "Técnico",
+      "applies_to": ["locacao"],
+      "label": {
+        "pt-BR": "Laudo de Avaliação (CIHAR) ausente",
+        "en-US": "Missing Valuation Report (CIHAR)"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe o Laudo de Avaliação vigente (obrigatório).",
+          "en-US": "Attach current Valuation Report (mandatory)."
+        },
+        "ci": {
+          "pt-BR": "Laudo CIHAR é obrigatório em locações, independentemente do valor.",
+          "en-US": "CIHAR valuation report is mandatory for leases, regardless of value."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.2.1.",
+        "en-US": "AD200 3.5.2.1."
+      },
+      "references": ["AD200 v0.32 – 3.5.2.1"]
+    },
+    {
+      "code": "VALOR_ACIMA_LAUDO_3_5_2_1_1",
+      "categoria": "Financeiro",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Valor proposto acima do Laudo de Avaliação",
+        "en-US": "Proposed price above Valuation cap"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Adequar ao valor máximo do laudo ou justificar exceção.",
+          "en-US": "Align to valuation cap or justify exception."
+        },
+        "ci": {
+          "pt-BR": "Vedada contratação acima do laudo, salvo nova locação/cessão de imóvel já ocupado (ver 3.1.11) com justificativas.",
+          "en-US": "Contracting above the cap is barred except for new lease/cession of already occupied site (see 3.1.11) with justification."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.2.1.1 (cap) e 3.1.11 (exceção).",
+        "en-US": "AD200 3.5.2.1.1 (cap) and 3.1.11 (exception)."
+      },
+      "references": ["AD200 v0.32 – 3.5.2.1.1", "AD200 v0.32 – 3.1.11"]
+    },
+    {
+      "code": "DOC_IMOVEL_MATRICULA_3_5_3_1_1",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "comodato"],
+      "label": {
+        "pt-BR": "Matrícula/Inteiro Teor desatualizada/ausente",
+        "en-US": "Outdated/missing Title Registry/Full Record"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Envie matrícula/certidão atualizada.",
+          "en-US": "Submit updated title/registry certificate."
+        },
+        "ci": {
+          "pt-BR": "Obrigatória matrícula/certidão atualizada no cadastramento no SICLG.",
+          "en-US": "Updated title/registry required upon SICLG submission."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.3.1.1.",
+        "en-US": "AD200 3.5.3.1.1."
+      },
+      "references": ["AD200 v0.32 – 3.5.3.1.1"]
+    },
+    {
+      "code": "DOC_IMOVEL_IPTU_3_5_3_1_2",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "comodato"],
+      "label": {
+        "pt-BR": "IPTU – certidão negativa/original ausente",
+        "en-US": "IPTU (municipal tax) clearance missing"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe certidão negativa/original de IPTU.",
+          "en-US": "Attach IPTU clearance certificate."
+        },
+        "ci": {
+          "pt-BR": "Exigência de certidão negativa/original de tributos municipais atualizada.",
+          "en-US": "Updated negative/original municipal tax clearance required."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.3.1.2.",
+        "en-US": "AD200 3.5.3.1.2."
+      },
+      "references": ["AD200 v0.32 – 3.5.3.1.2"]
+    },
+    {
+      "code": "DOC_IMOVEL_HABITESE_3_5_3_1_3",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "comodato"],
+      "label": {
+        "pt-BR": "Averbação/Habite-se ausente",
+        "en-US": "Missing Occupancy/As-built record"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Apresente averbação ou Habite-se.",
+          "en-US": "Provide occupancy/as-built certification."
+        },
+        "ci": {
+          "pt-BR": "Obrigatória averbação ou Habite-se para imóveis edificados.",
+          "en-US": "Mandatory for built properties."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.3.1.3.",
+        "en-US": "AD200 3.5.3.1.3."
+      },
+      "references": ["AD200 v0.32 – 3.5.3.1.3"]
+    },
+    {
+      "code": "DOC_IMOVEL_PERMISSAO_ATIV_BANCARIA_3_5_3_1_4",
+      "categoria": "Jurídico",
+      "applies_to": ["locacao", "comodato", "cessao"],
+      "label": {
+        "pt-BR": "Permissão para atividade bancária não comprovada",
+        "en-US": "Banking activity permission not evidenced"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe documento/menção legal que autorize a atividade.",
+          "en-US": "Attach document/legal mention authorizing activity."
+        },
+        "ci": {
+          "pt-BR": "Exigir documento do Poder Público local, menção a legislação permissiva ou inexistência de vedação.",
+          "en-US": "Require local Public Authority document, permissive legislation, or absence of prohibition."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.3.1.4.",
+        "en-US": "AD200 3.5.3.1.4."
+      },
+      "references": ["AD200 v0.32 – 3.5.3.1.4"]
+    },
+    {
+      "code": "IMOVEL_COM_ONUS_3_5_3_1_5",
+      "categoria": "Jurídico",
+      "applies_to": ["locacao", "comodato"],
+      "label": {
+        "pt-BR": "Imóvel com ônus/débitos/restrições não saneados",
+        "en-US": "Encumbered property (liens/debts/restrictions)"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Saneie ônus/restrições ou justifique e mitigue.",
+          "en-US": "Clear encumbrances or justify and mitigate."
+        },
+        "ci": {
+          "pt-BR": "Imóvel deve estar livre; admite-se exceção com justificativas e ações mitigadoras (cláusulas, averbação, certidões alternativas).",
+          "en-US": "Property should be clear; exception allowed with justifications and mitigations (clauses, registry, alternative certificates)."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.3.1.5 a 3.5.3.1.5.3; AD199; AD159.",
+        "en-US": "AD200 3.5.3.1.5 to 3.5.3.1.5.3; AD199; AD159."
+      },
+      "references": ["AD200 v0.32 – 3.5.3.1.5–3.5.3.1.5.3", "AD199", "AD159"]
+    },
+    {
+      "code": "DOC_PROPONENTE_PF_PJ_3_5_4",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Documentação do proponente (PF/PJ) incompleta",
+        "en-US": "Incomplete supplier (PF/PJ) documentation"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Complete a documentação obrigatória (PF/PJ).",
+          "en-US": "Complete mandatory supplier documentation."
+        },
+        "ci": {
+          "pt-BR": "PF: identidade/CPF/CND; PJ: CNPJ, ato constitutivo, certidão simplificada, CND/CPEND, CRF (quando aplicável).",
+          "en-US": "PF: ID/CPF/CND; PJ: CNPJ, bylaws, simplified certificate, tax clearance, FGTS (when applicable)."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.4.1 e 3.5.4.2.",
+        "en-US": "AD200 3.5.4.1 and 3.5.4.2."
+      },
+      "references": ["AD200 v0.32 – 3.5.4.1–3.5.4.2"]
+    },
+    {
+      "code": "REPRESENTACAO_LEGAL_3_5_5",
+      "categoria": "Documentação",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Representação legal/poderes não comprovados",
+        "en-US": "Legal representation/powers not evidenced"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe procuração/ato e identificação do representante.",
+          "en-US": "Attach power of attorney/appointment and representative ID."
+        },
+        "ci": {
+          "pt-BR": "Exigir instrumento jurídico de representação válido e documentos do(s) procurador(es).",
+          "en-US": "Require valid legal instrument of representation and representative documents."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.5.5.",
+        "en-US": "AD200 3.5.5."
+      },
+      "references": ["AD200 v0.32 – 3.5.5"]
+    },
+    {
+      "code": "DADOS_BANCARIOS_CAIXA_3_13_1",
+      "categoria": "Financeiro",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Dados bancários fora do padrão (conta CAIXA)",
+        "en-US": "Bank details not compliant (CAIXA account)"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Informe agência/conta CAIXA ou justifique exceção.",
+          "en-US": "Provide CAIXA branch/account or justify exception."
+        },
+        "ci": {
+          "pt-BR": "Crédito em conta CAIXA é regra; exceções exigem manifestação SR/GELOG (exceto GRU).",
+          "en-US": "Default is CAIXA account credit; exceptions require SR/GELOG statement (except GRU)."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.13.1–3.13.2.",
+        "en-US": "AD200 3.13.1–3.13.2."
+      },
+      "references": ["AD200 v0.32 – 3.13.1–3.13.2"]
+    },
+    {
+      "code": "CREDITO_TERCEIRO_3_13_3",
+      "categoria": "Financeiro",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Crédito a terceiros sem documentos",
+        "en-US": "Payment to third party without documents"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe declaração e prova do vínculo/obrigação.",
+          "en-US": "Attach declaration and proof of linkage/obligation."
+        },
+        "ci": {
+          "pt-BR": "Exigir declaração de cessão de crédito e documentos de vínculo (contrato, dependente IR, pensão).",
+          "en-US": "Require payment assignment declaration and supporting docs (contract, IR dependent, alimony)."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.13.3 e subitens; CR001 (modelos).",
+        "en-US": "AD200 3.13.3 and subitems; CR001 (templates)."
+      },
+      "references": ["AD200 v0.32 – 3.13.3", "CR001"]
+    },
+    {
+      "code": "LAUDO_VISTORIA_3_16_1",
+      "categoria": "Técnico",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Laudo de Vistoria ausente",
+        "en-US": "Missing Inspection Report"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Anexe Laudo de Vistoria com fotos e metragem.",
+          "en-US": "Attach Inspection Report with photos and area."
+        },
+        "ci": {
+          "pt-BR": "Entrega do imóvel condicionada a Laudo do EEAT, integrando o contrato.",
+          "en-US": "Handover requires EEAT inspection report, as part of the contract."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.16.1.",
+        "en-US": "AD200 3.16.1."
+      },
+      "references": ["AD200 v0.32 – 3.16.1"]
+    },
+    {
+      "code": "PUBLICACAO_DOU_3_17",
+      "categoria": "Processual",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Publicação no DOU pendente",
+        "en-US": "Pending official gazette publication"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Providencie a publicação do extrato no prazo.",
+          "en-US": "Publish the contract abstract within the deadline."
+        },
+        "ci": {
+          "pt-BR": "A publicação na imprensa oficial é condição de eficácia; observar prazos e formato.",
+          "en-US": "Publication in the official gazette is required for effectiveness; observe deadlines and format."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.17.1–3.17.2; AD020.",
+        "en-US": "AD200 3.17.1–3.17.2; AD020."
+      },
+      "references": ["AD200 v0.32 – 3.17.1–3.17.2", "AD020"]
+    },
+    {
+      "code": "PROCESSO_SICLG_INCOMPLETO_3_18",
+      "categoria": "Processual",
+      "applies_to": ["locacao", "cessao", "comodato"],
+      "label": {
+        "pt-BR": "Processo no SICLG incompleto/desorganizado",
+        "en-US": "SICLG case incomplete/disorganized"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Organize e anexe todas as peças obrigatórias.",
+          "en-US": "Organize and attach all required documents."
+        },
+        "ci": {
+          "pt-BR": "Inserir peças mínimas, ordem cronológica, legibilidade e auditabilidade no SICLG.",
+          "en-US": "Include minimum documents, chronological order, legibility and auditability in SICLG."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.18.1 e 3.18.1.2; AD020.",
+        "en-US": "AD200 3.18.1 and 3.18.1.2; AD020."
+      },
+      "references": ["AD200 v0.32 – 3.18.1–3.18.1.2", "AD020"]
+    },
+    {
+      "code": "CESSAO_PAE_INSTRUMENTO_3_11_4",
+      "categoria": "Processual",
+      "applies_to": ["cessao"],
+      "label": {
+        "pt-BR": "Cessão/PAE/ETNC acima do limite sem instrumento próprio",
+        "en-US": "Cession/PAE/ETNC above threshold without proper instrument"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Formalize por instrumento próprio do SICLG.",
+          "en-US": "Formalize via the specific SICLG instrument."
+        },
+        "ci": {
+          "pt-BR": "Para ônus anual > R$ 73.382, usar instrumento específico; abaixo disso, a troca de correspondências pode bastar.",
+          "en-US": "For yearly burden > R$ 73,382, use the specific instrument; below it, correspondence may suffice."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.11.4 e 3.11.4.1.",
+        "en-US": "AD200 3.11.4 and 3.11.4.1."
+      },
+      "references": ["AD200 v0.32 – 3.11.4–3.11.4.1"]
+    },
+    {
+      "code": "MULTA_RESCISAO_FORA_PARAM_3_14",
+      "categoria": "Jurídico",
+      "applies_to": ["locacao"],
+      "label": {
+        "pt-BR": "Cláusula de multa em desacordo",
+        "en-US": "Penalty clause out of bounds"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Ajuste a multa aos parâmetros normativos.",
+          "en-US": "Adjust penalty to normative parameters."
+        },
+        "ci": {
+          "pt-BR": "Atraso: 0,033%/dia; rescisão: até 10% (simples) ou escalas até 25% (condições suspensivas). SR/GELOG pode autorizar acima, dentro da lei.",
+          "en-US": "Delay: 0.033%/day; early termination: up to 10% (simple) or tiered up to 25% (suspensive clauses). SR/GELOG may allow higher within law."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.14.1.1; 3.14.1.2.1; 3.14.1.2.2; 3.14.2.",
+        "en-US": "AD200 3.14.1.1; 3.14.1.2.1; 3.14.1.2.2; 3.14.2."
+      },
+      "references": ["AD200 v0.32 – 3.14.1.1; 3.14.1.2.1; 3.14.1.2.2; 3.14.2"]
+    },
+    {
+      "code": "SUBLOCACAO_AUTORIZACAO_3_10",
+      "categoria": "Jurídico",
+      "applies_to": ["locacao"],
+      "label": {
+        "pt-BR": "Sublocação sem autorização/termo",
+        "en-US": "Sublease without authorization/amendment"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Preveja em contrato ou firme termo aditivo.",
+          "en-US": "Include in contract or sign an addendum."
+        },
+        "ci": {
+          "pt-BR": "Sublocação depende de previsão/termo; valor ≤ locação; prazo limitado ao contrato principal.",
+          "en-US": "Sublease requires contractual provision/addendum; value ≤ lease; term limited to main lease."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.10.1–3.10.6.",
+        "en-US": "AD200 3.10.1–3.10.6."
+      },
+      "references": ["AD200 v0.32 – 3.10.1–3.10.6"]
+    },
+    {
+      "code": "DUE_DILIGENCE_2M_3_1_7",
+      "categoria": "Compliance",
+      "applies_to": ["locacao", "cessao"],
+      "label": {
+        "pt-BR": "Due diligence (> R$ 2 mi/ano) não realizada",
+        "en-US": "Due diligence (> BRL 2M/year) not performed"
+      },
+      "mensagens": {
+        "push": {
+          "pt-BR": "Realize due diligence (CR512) dos envolvidos.",
+          "en-US": "Perform due diligence (CR512) for all involved."
+        },
+        "ci": {
+          "pt-BR": "Obrigatória para valores anuais acima de R$ 2.000.000 (proprietário e, se houver, administrador/cedente).",
+          "en-US": "Mandatory for yearly values above BRL 2,000,000 (owner and, if any, administrator/cedent)."
+        }
+      },
+      "legal_basis": {
+        "pt-BR": "AD200 3.1.7; CR512.",
+        "en-US": "AD200 3.1.7; CR512."
+      },
+      "references": ["AD200 v0.32 – 3.1.7", "CR512"]
+    }
+  ]
+}

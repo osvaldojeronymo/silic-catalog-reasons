@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="title">SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</div>
+    <div class="meta"><span id="metaVersao"></span></div>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Buscar (código, texto, referência)..." />
+      <select id="categoria">
+        <option value="">Categoria: todas</option>
+      </select>
+      <select id="tipo">
+        <option value="">Tipo: todos</option>
+        <option value="locacao">Locação</option>
+        <option value="cessao">Cessão</option>
+        <option value="comodato">Comodato</option>
+      </select>
+      <!-- <select id="lang">
+        <option value="pt-BR">pt-BR</option>
+        <option value="en-US">en-US</option>
+      </select> -->
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="footer">
+      <span class="pill">Dica</span> Clique em “Detalhes” para ver mensagens (push/CI), base legal e referências.
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

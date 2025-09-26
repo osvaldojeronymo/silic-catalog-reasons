@@ -1,5 +1,9 @@
 # SILIC 2.0 — Catálogo de Motivos (Vite + TS)
 
+[![Deploy](https://github.com/osvaldojeronymo/silic-catalog-reasons/actions/workflows/deploy.yml/badge.svg)](https://github.com/osvaldojeronymo/silic-catalog-reasons/actions/workflows/deploy.yml)
+
+Site publicado: https://osvaldojeronymo.github.io/silic-catalog-reasons/
+
 Projeto estático com Vite 7, TypeScript 5, Vitest, Playwright, ESLint (flat) e Prettier.
 
 ## Como rodar
@@ -55,8 +59,13 @@ npm run test:e2e
 
 ## GitHub Pages
 
-O `vite.config.ts` define `base: '/silic-catalog-reasons/'` para funcionar em Pages.
-Certifique-se de publicar `dist/` como site estático.
+Publicação via GitHub Actions (`deploy.yml`) usando artifact de build (`dist/`).
+
+`vite.config.ts` define `base: '/silic-catalog-reasons/'` garantindo paths corretos no subdiretório do Pages.
+
+Para disparar novo deploy: qualquer commit na branch `main`.
+
+Ver logs em: Actions > Deploy to GitHub Pages.
 
 ## CI
 

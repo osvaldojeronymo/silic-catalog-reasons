@@ -1,0 +1,3432 @@
+{
+  "versao": "2025-09-25",
+  "i18n": [
+    "pt-BR"
+  ],
+  "geral": [
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado /"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "financeiro",
+      "descrição": "ID Plano de Aquisições",
+      "detalhes": "não identificado / não encaminhado"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "financeiro",
+      "descrição": "Pagamento em favor de terceiros",
+      "detalhes": "Não há documentação que autoriza o pagamento a terceiros"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "financeiro",
+      "descrição": "Crédito para terceiros",
+      "detalhes": "pagamento de locação a terceiros sem a documentação"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o locador"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Falta laudo de avaliação / vencido / sem assinatura"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Prorrogação de vigência acima do valor do laudo de avaliação sem justificativa"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para prorrogar vigência contratual"
+    },
+    {
+      "processo": "Ato Formal",
+      "tipo": "locação",
+      "situação": "Prorrogação",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor/documento que comprove posse"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência de CND IPTU / documento vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Inexistência de autorização de atividade bancária"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência de certidão CND Federal / Certidão vencida"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência da certidão de regularidade - CRF / CRF Vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do cedente não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ata ou Termo de Posse do Representante Legal vigente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "Informação de dados bancários em outro banco sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "falta informação dos dados bancários"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Índice de correção do contrato",
+      "detalhes": "não identificado o índice de correção do contrato"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado / não dividido conforme calendário de pagamento"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informação acerca de contratação em ano eleitoral paara cessão sem ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (carência de pagamento / contato do cedente / vigência da contratação / Valor da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Prazo inferior a 12 meses"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Prazo inferior a 12 meses"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GEFIC (erro na CI/falta assinatura)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de autorização/aprovação da SR/SEV"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de RTA (dados divergentes/sem informações)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de Parecer Técnico CAIXA"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o cedente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência do anexo/informações de responsabilidade do locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de justificativa do investimento não recuperável"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor/documento que comprove posse"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência de CND IPTU / documento vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Inexistência de autorização de atividade bancária"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência de certidão CND Federal / Certidão vencida"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência da certidão de regularidade - CRF / CRF Vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do cedente não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ata ou Termo de Posse do Representante Legal vigente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "Informação de dados bancários em outro banco sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "falta informação dos dados bancários"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Índice de correção do contrato",
+      "detalhes": "não identificado o índice de correção do contrato"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado / não dividido conforme calendário de pagamento"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informação acerca de contratação em ano eleitoral para cessão sem ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (carência de pagamento / contato do cedente / vigência da contratação / Valor da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GEFIC (erro na CI/falta assinatura)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta autorização para abertura de nova unidade (Resolução)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de autorização/aprovação da SR/SEV"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de RTA (dados divergentes/sem informações)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de Parecer Técnico CAIXA"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o cedente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência do anexo/informações de responsabilidade do locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de justificativa do investimento não recuperável"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "troca de titularidade sem os documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "Ato formal",
+      "tipo": "cessão",
+      "situação": "Alteraçãod e Titularidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "troca de titularidade sem os documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "troca de titularidade sem a apresentação certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "troca de titularidade sem os documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "troca de titularidade sem apresentação da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "Informação de dados bancários em outro banco sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "falta informação dos dados bancários"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Índice de correção do contrato",
+      "detalhes": "não identificado o índice de correção do contrato"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado / não dividido conforme calendário de pagamento"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informação acerca de contratação em ano eleitoral para cessão sem ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (carência de pagamento / contato do cedente / vigência da contratação / Valor da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "cessão",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI/falta habite-se"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência de CND IPTU / documento vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Inexistência de autorização de atividade bancária"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do locador não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (contato do comodante / vigência da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Propostas recusadas não justificadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Contrato com prazo menor que 60 meses sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GEFIC (erro na CI/falta assinatura)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de autorização/aprovação da SR/SEV"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de RTA (dados divergentes/sem informações)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de Parecer Técnico CAIXA"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o comadante"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das Propostas de imóveis"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência do anexo/informações de responsabilidade do comodante"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de justificativa do investimento não recuperável"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI/falta habite-se"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência de CND IPTU / documento vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Inexistência de autorização de atividade bancária"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do locador não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (contato do comodante / vigência da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Propostas recusadas não justificadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Contrato com prazo menor que 60 meses sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GEFIC (erro na CI/falta assinatura)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta autorização para abertura de nova unidade (Resolução)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de autorização/aprovação da SR/SEV"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de RTA (dados divergentes/sem informações)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de Parecer Técnico CAIXA"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o comadante"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das Propostas de imóveis"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência do anexo/informações de responsabilidade do comodante"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de justificativa do investimento não recuperável"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor/CRI vencida"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI/falta habite-se"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência do CNPJ do comandante"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do locador não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (contato do comodante / vigência da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Contrato com prazo menor que 60 meses sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "comodato",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o comadante"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI/falta habite-se"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência de CND IPTU / documento vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Inexistência de autorização de atividade bancária"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência de certidão CND Federal / Certidão vencida"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência da certidão de regularidade - CRF / CRF Vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do locador não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "Informação de dados bancários em outro banco sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "falta informação dos dados bancários"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "ID Plano de Aquisições",
+      "detalhes": "não identificado / outra unidade"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Índice de correção do contrato",
+      "detalhes": "não identificado o índice de correção do contrato"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Pagamento em favor de terceiros",
+      "detalhes": "Não há documentação que autoriza o pagamento a terceiros"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado / não dividido conforme calendário de pagamento"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (carência de pagamento / contato do locador/cedente / vigência da contratação / Valor da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Propostas recusadas não justificadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Auseência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Contrato com prazo menor que 60 meses sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GEFIC (erro na CI/falta assinatura)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de autorização/aprovação da SR/SEV"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de RTA (dados divergentes/sem informações)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de Parecer Técnico CAIXA"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das Propostas de imóveis"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência do anexo/informações de responsabilidade do locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de justificativa do investimento não recuperável"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Falta laudode avaliação de valor venal para contratação de imóveis acima 550m2"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Falta laudo de avaliação / vencido / sem assinatura"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Contratação acima do valor do laudo de avaliação sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Publicação",
+      "detalhes": "Área da publicação divergente da localização contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "mudança de endereço",
+      "categoria": "processual",
+      "descrição": "Publicação",
+      "detalhes": "Falta publicação (publicação em desconformidade normativa)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI/falta habite-se"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência de CND IPTU / documento vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Justificar que o imóvel está livre e desembaraçado de ônus"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Inexistência de autorização de atividade bancária"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência de certidão CND Federal / Certidão vencida"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Ausência da certidão de regularidade - CRF / CRF Vencido"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Ausência de identificação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Documentos do locador não assinados digitalmente"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "Informação de dados bancários em outro banco sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "falta informação dos dados bancários"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "ID Plano de Aquisições",
+      "detalhes": "não identificado / outra unidade"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Índice de correção do contrato",
+      "detalhes": "não identificado o índice de correção do contrato"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Pagamento em favor de terceiros",
+      "detalhes": "Não há documentação que autoriza o pagamento a terceiros"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado / não dividido conforme calendário de pagamento"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (carência de pagamento / contato do locador/cedente / vigência da contratação / Valor da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Propostas recusadas não justificadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Auseência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Contrato com prazo menor que 60 meses sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GEFIC (erro na CI/falta assinatura)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta autorização para abertura de nova unidade (Resolução)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de autorização/aprovação da SR/SEV"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de RTA (dados divergentes/sem informações)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de Parecer Técnico CAIXA"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das Propostas de imóveis"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência do anexo/informações de responsabilidade do locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência de justificativa do investimento não recuperável"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Falta laudode avaliação de valor venal para contratação de imóveis acima 550m2"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Falta laudo de avaliação / vencido / sem assinatura"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Contratação acima do valor do laudo de avaliação sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Publicação",
+      "detalhes": "Área da publicação divergente da localização contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "nova unidade",
+      "categoria": "processual",
+      "descrição": "Publicação",
+      "detalhes": "Falta publicação (publicação em desconformidade normativa)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Ausência do registro do imóvel/Certidão inteiro teor / registro do imóvel/CRI fora da validade"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Averbação da área não identificada no RGI/falta habite-se"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "documentos do imóvel",
+      "detalhes": "Sublocação sem autorização/termo"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Fornecedor com vedação/impedimento para contratar"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Risco de nepotismo/relacionamento vedado"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Listas restritivas (setor público/trabalho escravo/risco de imagem)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Locador com inscrição no CADIN / Sem justificativa de contratação pela CELOG"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Impedimentos",
+      "detalhes": "Falta estipular cláusula contratual para apresentação da regularidade"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Troca de titularidade sem apresentação dos documentos identificação (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "locador pessoa física",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Ausência da certidão simplificada da junta comercial"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "troca de titularidade sem documentação de identificação sócios (RG/CPF)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "troca de titularidade sem a última versão do Contrato Social"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "documentação",
+      "descrição": "Locador Pessoa Jurídica",
+      "detalhes": "Representação legal/poderes não comprovados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "Informação de dados bancários em outro banco sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Dados Bancários",
+      "detalhes": "falta informação dos dados bancários"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Falta ateste GEORC",
+      "detalhes": "Contratação acima de 3 milhões"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "ID Plano de Aquisições",
+      "detalhes": "não identificado / outra unidade"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Índice de correção do contrato",
+      "detalhes": "não identificado o índice de correção do contrato"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Pagamento em favor de terceiros",
+      "detalhes": "Não há documentação que autoriza o pagamento a terceiros"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "financeiro",
+      "descrição": "Pré-comprometimento",
+      "detalhes": "a menor / não encaminhado / não dividido conforme calendário de pagamento"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "À pedido",
+      "detalhes": "Por solicitação do gestor operacional"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta esclarecer a relação custo x benefício"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Erro na descrição do objeto da demanda"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação da aderência ao plano estratégico"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta informação de partes relacionadas"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Falta a CI CILOG (não assinada / não anexada)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informação acerca de contratação em ano eleitoral"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência das razões da escolha do fornecedor"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da informação gerais do contrato (carência de pagamento / contato do locador/cedente / vigência da contratação / Valor da contratação / Prazo de obras)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência da justificativa da contratação"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Ausência de informações das cláusulas mitigadoras dos riscos"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "CI CILOG (Processo no SICLG incompleto/desorganizado)",
+      "detalhes": "Contrato com prazo menor que 60 meses sem justificativa"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Ausência das informações de negociação com o locador"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Laudo de vistoria ausente (técnico)"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Documentos internos demanda",
+      "detalhes": "Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Falta laudo de avaliação / vencido / sem assinatura"
+    },
+    {
+      "processo": "contratação",
+      "tipo": "locação",
+      "situação": "regularização",
+      "categoria": "processual",
+      "descrição": "Laudo de avaliação",
+      "detalhes": "Contratação acima do valor do laudo de avaliação sem justificativa"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Documentação",
+      "descrição": "Documentos do imóvel",
+      "detalhes": "Ausência da declaração de cobertura do seguro do imóvel emitida pela seguradora"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Documentação",
+      "descrição": "Documentos do imóvel",
+      "detalhes": "Ausência de cópia do alvará de funcionamento"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Documentação",
+      "descrição": "Documentos do imóvel",
+      "detalhes": "Ausência do laudo de Avaliação do Imóvel elaborado pela CIHAR"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Documentação",
+      "descrição": "Documentos do imóvel",
+      "detalhes": "Ausência da Matrícula do imóvel no CRI, ou Matrícula desatualizada"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "financeiro",
+      "descrição": "Pagamento de Taxas",
+      "detalhes": "Ausência dos comprovantes de todos os pagamentos incidentes sobre o imóvel referentes aos últimos 12 meses (água, energia elétrica, taxas)"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "financeiro",
+      "descrição": "Negociação",
+      "detalhes": "Ausência de documentos que demonstrem a tentativa da CAIXA de negociar amigavelmente a renovação do contrato com aluguel a preço de mercado"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Processual",
+      "descrição": "Informações do contrato",
+      "detalhes": "Ausência de informação da data de início e fim da nova vigência"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "financeiro",
+      "descrição": "Informações do contrato",
+      "detalhes": "Ausência de informação do valor atual do aluguel"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Processual",
+      "descrição": "Informações do locador",
+      "detalhes": "Ausência de informação do nome/CPF/CNPJ do locador"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Processual",
+      "descrição": "Informações do locador",
+      "detalhes": "Ausência de informação do endereço completo com CEP do locador"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "financeiro",
+      "descrição": "Informações do Representante",
+      "detalhes": "Ausência de informação do nome/CPF/CNPJ do Representante"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Processual",
+      "descrição": "Informações do Representante",
+      "detalhes": "Ausência de informação do endereço completo com CEP do Representante"
+    },
+    {
+      "processo": "Atos Formais",
+      "tipo": "locação",
+      "situação": "Ação Renovatória",
+      "categoria": "Processual",
+      "descrição": "Dados para contato com o locador",
+      "detalhes": "Ausência de informação do e-mail e telefone do locador"
+    }
+  ]
+}

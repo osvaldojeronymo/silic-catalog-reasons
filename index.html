@@ -1,45 +1,89 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="title">SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</div>
-    <div class="meta"><span id="metaVersao"></span></div>
-    <div style="margin-top: 10px;">
-      <a href="https://osvaldojeronymo.github.io/silic-portal-imoveis/" class="btn-voltar" style="display:inline-block;padding:8px 16px;background:#1976d2;color:#fff;border-radius:4px;text-decoration:none;font-weight:bold;">← Voltar para o Portal de Imóveis</a>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-bar">
+        <div class="left">
+          <h1 class="title">SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</h1>
+        </div>
+        <div class="right">
+          <span id="metaVersao" class="subtle-version" aria-label="Versão do catálogo"></span>
+          <a href="https://osvaldojeronymo.github.io/silic-portal-imoveis/" class="btn btn-primary">
+            ← Voltar para o Portal de Imóveis
+          </a>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <div class="toolbar">
-      <input id="q" type="search" placeholder="Buscar (código, texto, referência)..." />
-      <select id="categoria">
-        <option value="">Categoria: todas</option>
-      </select>
-      <select id="tipo">
-        <option value="">Tipo: todos</option>
-        <option value="locacao">Locação</option>
-        <option value="cessao">Cessão</option>
-        <option value="comodato">Comodato</option>
-      </select>
-      <!-- <select id="lang">
-        <option value="pt-BR">pt-BR</option>
-        <option value="en-US">en-US</option>
-      </select> -->
-    </div>
+  <main class="main">
+      <div class="toolbar">
+        <label for="q" class="sr-only">Buscar</label>
+        <input id="q" type="search" placeholder="Buscar (processo, tipo, detalhes)…" aria-label="Buscar" />
 
-    <div class="grid" id="grid"></div>
+        <label for="processo" class="sr-only">Processo</label>
+        <select id="processo" aria-label="Processo">
+          <option value="">Todos os processos</option>
+        </select>
 
-    <div class="footer">
-      <span class="pill">Dica</span> Clique em “Detalhes” para ver mensagens (push/CI), base legal e referências.
-    </div>
-  </main>
+        <label for="tipo" class="sr-only">Tipo</label>
+        <select id="tipo" aria-label="Tipo">
+          <option value="">Todos os tipos</option>
+        </select>
 
-  <script src="main.js"></script>
-</body>
+        <label for="situacao" class="sr-only">Situação</label>
+        <select id="situacao" aria-label="Situação">
+          <option value="">Todas as situações</option>
+        </select>
+
+        <label for="categoria" class="sr-only">Categoria</label>
+        <select id="categoria" aria-label="Categoria">
+          <option value="">Todas as categorias</option>
+        </select>
+      </div>
+
+  <div id="activeChips" class="chips" aria-live="polite"></div>
+
+      <div class="viewbar">
+        <div class="left">
+          <button id="viewSummary" type="button" class="btn btn-ghost" aria-pressed="true">Resumo por categoria</button>
+          <button id="viewList" type="button" class="btn">Lista completa</button>
+        </div>
+        <div class="right">
+          <span id="resultsInfo" class="results-info" aria-live="polite" role="status"></span>
+          <button id="btnReset" type="button" class="btn btn-secondary" title="Limpar filtros">Limpar filtros</button>
+          <button id="btnDensity" type="button" class="btn" title="Alternar modo compacto">Modo compacto</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+
+      <div class="pagination" id="pagination" hidden>
+        <div class="pagination-left">
+          <label for="pageSize" class="sr-only">Itens por página</label>
+          <select id="pageSize" aria-label="Itens por página">
+            <option value="5">5 por página</option>
+            <option value="10" selected>10 por página</option>
+            <option value="20">20 por página</option>
+            <option value="all">Todas</option>
+          </select>
+        </div>
+        <nav class="pagination-nav" aria-label="Paginação">
+          <button id="btnPrev" type="button" class="btn" aria-label="Página anterior">Anterior</button>
+          <div id="pageNumbers" class="page-numbers" role="list"></div>
+          <button id="btnNext" type="button" class="btn" aria-label="Próxima página">Próxima</button>
+        </nav>
+      </div>
+
+    </main>
+
+    <!-- Apenas UM entrypoint; Vite cuidará do CSS importado no TS -->
+    <script type="module" src="/src/main.ts"></script>
+    <noscript>Este catálogo precisa de JavaScript para funcionar.</noscript>
+
+  </body>
 </html>

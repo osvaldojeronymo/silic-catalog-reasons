@@ -4,23 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <div class="header-bar">
-        <div class="left">
-          <h1 class="title">SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</h1>
+    <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
+    <header class="header silic-header" role="banner">
+      <nav class="navbar" aria-label="Cabeçalho principal">
+        <div class="nav-container">
+          <div class="nav-left">
+            <div class="nav-logo">
+              <img src="assets/images/logo-caixa.svg" alt="Logomarca Caixa Econômica Federal" class="logo-image" width="40" height="40" />
+            </div>
+            <div class="nav-text">
+              <h1 class="system-title">SILIC 2.0</h1>
+              <p class="system-subtitle">Protótipo – Catálogo de Motivos de Devolução</p>
+            </div>
+          </div>
+          <div class="nav-actions">
+            <button id="voltarPortalBtn" class="btn-voltar-portal" type="button" onclick="voltarAoPortal()" aria-label="Voltar ao Portal de Imóveis">
+              Voltar ao Portal de Imóveis
+            </button>
+          </div>
         </div>
-        <div class="right">
-          <span id="metaVersao" class="subtle-version" aria-label="Versão do catálogo"></span>
-          <a href="https://osvaldojeronymo.github.io/silic-portal-imoveis/" class="btn btn-primary">
-            ← Voltar para o Portal de Imóveis
-          </a>
-        </div>
-      </div>
+      </nav>
     </header>
 
-  <main class="main">
+  <main id="conteudo" class="main" tabindex="-1">
       <div class="toolbar">
         <label for="q" class="sr-only">Buscar</label>
         <input id="q" type="search" placeholder="Buscar (processo, tipo, detalhes)…" aria-label="Buscar" />

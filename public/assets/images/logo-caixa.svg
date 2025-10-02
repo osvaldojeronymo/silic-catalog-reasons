@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50" height="40" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo CAIXA com estrutura original - apenas branco e laranja -->
+  <g transform="translate(4, 4)">
+    <!-- Símbolo principal em branco (era azul no original) -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 32H14.6L29.4 17.2H14.8L0 32Z" fill="#FFFFFF"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0L25.6 6.4L31.2 17.2L46 0H32Z" fill="#FFFFFF"/>
+    <!-- Detalhes em laranja CAIXA (mantendo cor original) -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.2 0H23.8L31.2 17.2H16.6L9.2 0Z" fill="#F39200"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 25.6L29.4 17.2L37.6 32H23L20 25.6Z" fill="#F39200"/>
+  </g>
+</svg>

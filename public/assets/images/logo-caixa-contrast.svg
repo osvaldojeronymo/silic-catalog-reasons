@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50" height="40" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo branco para máximo contraste -->
+  <rect width="50" height="40" fill="white" rx="6" ry="6"/>
+  
+  <!-- Logo CAIXA com cores oficiais otimizadas -->
+  <g transform="translate(4, 4)">
+    <!-- Símbolo principal com azul CAIXA -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 32H14.6L29.4 17.2H14.8L0 32Z" fill="#003875"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0L25.6 6.4L31.2 17.2L46 0H32Z" fill="#003875"/>
+    <!-- Detalhes em laranja CAIXA vibrante -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.2 0H23.8L31.2 17.2H16.6L9.2 0Z" fill="#FF6600"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 25.6L29.4 17.2L37.6 32H23L20 25.6Z" fill="#FF6600"/>
+  </g>
+</svg>

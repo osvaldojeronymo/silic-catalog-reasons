@@ -9,6 +9,7 @@ import { fillSelect, renderLista, mapLabel } from '@/ui/render'
 const els = {
   q: document.getElementById('q') as HTMLInputElement | null,
   processo: document.getElementById('processo') as HTMLSelectElement | null,
+  stepSilic: document.getElementById('stepSilic') as HTMLSelectElement | null,
   tipo: document.getElementById('tipo') as HTMLSelectElement | null,
   situacao: document.getElementById('situacao') as HTMLSelectElement | null,
   categoria: document.getElementById('categoria') as HTMLSelectElement | null,
@@ -17,6 +18,7 @@ const els = {
   viewSummary: document.getElementById('viewSummary') as HTMLButtonElement | null,
   viewList: document.getElementById('viewList') as HTMLButtonElement | null,
   btnReset: document.getElementById('btnReset') as HTMLButtonElement | null,
+  btnMappedUnused: document.getElementById('btnMappedUnused') as HTMLButtonElement | null,
   resultsInfo: document.getElementById('resultsInfo') as HTMLSpanElement | null,
   btnDensity: document.getElementById('btnDensity') as HTMLButtonElement | null,
   pagination: document.getElementById('pagination') as HTMLDivElement | null,
@@ -50,6 +52,7 @@ async function boot() {
   // Popular selects dinamicamente
   const uniq = <T,>(arr: T[]) => Array.from(new Set(arr))
   if (els.processo) fillSelect(els.processo, uniq(lista.map((x) => x.processo).filter(Boolean)))
+  if (els.stepSilic) fillSelect(els.stepSilic, uniq(lista.map((x) => x.stepSilic).filter(Boolean)))
   if (els.tipo) fillSelect(els.tipo, uniq(lista.map((x) => x.tipo).filter(Boolean)))
   if (els.situacao) fillSelect(els.situacao, uniq(lista.map((x) => x.situacao).filter(Boolean)))
   if (els.categoria) fillSelect(els.categoria, uniq(lista.map((x) => x.categoria).filter(Boolean)))
@@ -58,6 +61,7 @@ async function boot() {
   type URLState = {
     q: string
     processo: string
+    stepSilic: string
     tipo: string
     situacao: string
     categoria: string
@@ -70,6 +74,7 @@ async function boot() {
     return {
       q: sp.get('q') ?? '',
       processo: sp.get('processo') ?? '',
+      stepSilic: sp.get('stepSilic') ?? '',
       tipo: sp.get('tipo') ?? '',
       situacao: sp.get('situacao') ?? '',
       categoria: sp.get('categoria') ?? '',
@@ -82,6 +87,7 @@ async function boot() {
     const sp = new URLSearchParams()
     if (f.q) sp.set('q', f.q)
     if (f.processo) sp.set('processo', f.processo)
+    if (f.stepSilic) sp.set('stepSilic', f.stepSilic)
     if (f.tipo) sp.set('tipo', f.tipo)
     if (f.situacao) sp.set('situacao', f.situacao)
     if (f.categoria) sp.set('categoria', f.categoria)
@@ -100,6 +106,7 @@ async function boot() {
   // Aplicar estados iniciais nos inputs
   if (els.q) els.q.value = initial.q
   if (els.processo) els.processo.value = initial.processo
+  if (els.stepSilic) els.stepSilic.value = initial.stepSilic
   if (els.tipo) els.tipo.value = initial.tipo
   if (els.situacao) els.situacao.value = initial.situacao
   if (els.categoria) els.categoria.value = initial.categoria
@@ -107,6 +114,7 @@ async function boot() {
   const filtros: Filtros = {
     q: initial.q,
     processo: initial.processo,
+    stepSilic: initial.stepSilic,
     tipo: initial.tipo,
     situacao: initial.situacao,
     categoria: initial.categoria
@@ -124,38 +132,139 @@ async function boot() {
   }
 
   const CAT_ICONS: Record<string, string> = {
-    documentacao: '📄',
-    financeiro: '💰',
-    processual: '⚖️'
+    'Dados iniciais': '🗂️',
+    'Dados contrato': '📑',
+    'Dados locador': '🏢',
+    'Dados adicionais': '➕',
+    'Documentação': '📄',
+    'Financeiro': '💰',
+    'Processual': '⚖️',
+    'Representante legal': '🧑‍⚖️'
   }
 
   function renderSummary(items: Reason[]) {
     if (!els.grid) return
-    // Agrupa por categoria e mostra contagens
-    const map = new Map<string, number>()
-    for (const r of items) map.set(r.categoria, (map.get(r.categoria) ?? 0) + 1)
-    const cats = Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
-    ;(els.grid as HTMLElement).innerHTML = cats
-      .map(([cat, n]) => {
-        const icon = CAT_ICONS[cat] ?? '📁'
-        const name = mapLabel(cat)
-        const pressed = filtros.categoria === cat ? 'true' : 'false'
+    // 1º nível: processo. 2º: etapa SILIC. 3º: categoria
+    const byProcess = new Map<string, Map<string, Map<string, number>>>()
+    const definirGlobal = new Map<string, number>()
+    for (const r of items) {
+      const processo = r.processo || 'Definir'
+      const step = r.stepSilic || 'Definir'
+      const cat = r.categoria || 'Dados adicionais'
+
+      if (step === 'Definir') {
+        definirGlobal.set(cat, (definirGlobal.get(cat) ?? 0) + 1)
+      }
+
+      if (!byProcess.has(processo)) byProcess.set(processo, new Map())
+      const byStep = byProcess.get(processo)!
+      if (!byStep.has(step)) byStep.set(step, new Map())
+      const catMap = byStep.get(step)!
+      catMap.set(cat, (catMap.get(cat) ?? 0) + 1)
+    }
+
+    const PROCESS_ORDER = ['Contratação', 'Atos Formais']
+    const processos = Array.from(byProcess.entries()).sort((a, b) => {
+      const ia = PROCESS_ORDER.indexOf(a[0])
+      const ib = PROCESS_ORDER.indexOf(b[0])
+      if (ia !== -1 && ib !== -1) return ia - ib
+      if (ia !== -1) return -1
+      if (ib !== -1) return 1
+      return a[0].localeCompare(b[0], 'pt-BR')
+    })
+
+    const renderStepSection = (processo: string, step: string, catMap: Map<string, number>) => {
+      const stageTotal = Array.from(catMap.values()).reduce((acc, n) => acc + n, 0)
+      const categories = Array.from(catMap.entries()).sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+
+      const allPressed = filtros.processo === processo && filtros.stepSilic === step && !filtros.categoria ? 'true' : 'false'
+      const allBtn = `
+        <button class="cat-card" data-proc="${processo}" data-step="${step}" data-cat="" aria-label="Etapa ${step} (${stageTotal})" aria-pressed="${allPressed}">
+          <span class="cat-name" data-icon="🧭">${mapLabel(step)} — todos os motivos</span>
+          <span class="cat-count">${stageTotal}</span>
+        </button>
+      `
+
+      const catButtons = categories
+        .map(([cat, n]) => {
+          const icon = CAT_ICONS[cat] ?? '📁'
+          const name = mapLabel(cat)
+          const pressed = filtros.processo === processo && filtros.stepSilic === step && filtros.categoria === cat ? 'true' : 'false'
+          return `
+            <button class="cat-card" data-proc="${processo}" data-step="${step}" data-cat="${cat}" aria-label="${name} (${n})" aria-pressed="${pressed}">
+              <span class="cat-name" data-icon="${icon}">${name}</span>
+              <span class="cat-count">${n}</span>
+            </button>
+          `
+        })
+        .join('')
+
+      return `
+        <section class="step-card">
+          <div class="step-header">
+            <h3 class="step-title">Etapa SILIC: ${mapLabel(step)}</h3>
+            <span class="step-total">${stageTotal} motivo${stageTotal === 1 ? '' : 's'}</span>
+          </div>
+          <div class="step-cards">
+            ${allBtn}
+            ${catButtons}
+          </div>
+        </section>
+      `
+    }
+
+    if (els.btnMappedUnused) {
+      const definirTotal = Array.from(definirGlobal.values()).reduce((acc, n) => acc + n, 0)
+      if (definirTotal > 0) {
+        els.btnMappedUnused.hidden = false
+        els.btnMappedUnused.textContent = `Motivos mapeados - não utilizados (${definirTotal})`
+      } else {
+        els.btnMappedUnused.hidden = true
+      }
+    }
+
+    ;(els.grid as HTMLElement).innerHTML =
+      processos
+      .map(([processo, byStep]) => {
+        const steps = Array.from(byStep.entries())
+          .filter(([step]) => step !== 'Definir')
+          .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+
+        if (!steps.length) return ''
+
+        const processoTotal = steps
+          .flatMap(([, catMap]) => Array.from(catMap.values()))
+          .reduce((acc, n) => acc + n, 0)
+
+        const stepsHtml = steps
+          .map(([step, catMap]) => renderStepSection(processo, step, catMap))
+          .join('')
+
         return `
-          <button class="cat-card" data-cat="${cat}" aria-label="${name} (${n})" aria-pressed="${pressed}">
-            <span class="cat-name" data-icon="${icon}">${name}</span>
-            <span class="cat-count">${n}</span>
-          </button>
+          <section class="process-card">
+            <div class="process-header">
+              <h2 class="process-title">Processo: ${mapLabel(processo)}</h2>
+              <span class="process-total">${processoTotal} motivo${processoTotal === 1 ? '' : 's'}</span>
+            </div>
+            ${stepsHtml}
+          </section>
         `
       })
       .join('')
 
-    // Click numa categoria aplica filtro e muda para lista
+    // Click em processo/etapa/categoria aplica filtro e muda para lista
     ;(els.grid as HTMLElement).querySelectorAll<HTMLButtonElement>('.cat-card')
       .forEach((btn) => {
         btn.addEventListener('click', () => {
-          const val = btn.getAttribute('data-cat') ?? ''
-          if (els.categoria) els.categoria.value = val
-          filtros.categoria = val
+          const processo = btn.getAttribute('data-proc') ?? ''
+          const step = btn.getAttribute('data-step') ?? ''
+          const cat = btn.getAttribute('data-cat') ?? ''
+          if (els.processo) els.processo.value = processo
+          if (els.stepSilic) els.stepSilic.value = step
+          if (els.categoria) els.categoria.value = cat
+          filtros.processo = processo
+          filtros.stepSilic = step
+          filtros.categoria = cat
           currentView = 'list'
           applyAndRender()
         })
@@ -166,6 +275,7 @@ async function boot() {
     if (!els.resultsInfo) return
     const parts = [] as string[]
     if (filtros.processo) parts.push(`Processo: ${filtros.processo}`)
+    if (filtros.stepSilic) parts.push(`Etapa SILIC: ${filtros.stepSilic}`)
     if (filtros.tipo) parts.push(`Tipo: ${filtros.tipo}`)
     if (filtros.situacao) parts.push(`Situação: ${filtros.situacao}`)
     if (filtros.categoria) parts.push(`Categoria: ${filtros.categoria}`)
@@ -179,6 +289,7 @@ async function boot() {
     if (!chipsContainer) return
     const parts: Array<{ key: keyof Filtros; label: string }> = []
     if (filtros.processo) parts.push({ key: 'processo', label: `Processo: ${filtros.processo}` })
+    if (filtros.stepSilic) parts.push({ key: 'stepSilic', label: `Etapa SILIC: ${filtros.stepSilic}` })
     if (filtros.tipo) parts.push({ key: 'tipo', label: `Tipo: ${filtros.tipo}` })
     if (filtros.situacao) parts.push({ key: 'situacao', label: `Situação: ${filtros.situacao}` })
     if (filtros.categoria) parts.push({ key: 'categoria', label: `Categoria: ${filtros.categoria}` })
@@ -220,9 +331,10 @@ async function boot() {
           <button id="clearFilters" class="btn btn-secondary" style="margin-top:10px">Limpar filtros</button>
         </div>`
       document.getElementById('clearFilters')?.addEventListener('click', () => {
-        filtros.q = filtros.processo = filtros.tipo = filtros.situacao = filtros.categoria = ''
+        filtros.q = filtros.processo = filtros.stepSilic = filtros.tipo = filtros.situacao = filtros.categoria = ''
         if (els.q) els.q.value = ''
         if (els.processo) els.processo.value = ''
+        if (els.stepSilic) els.stepSilic.value = ''
         if (els.tipo) els.tipo.value = ''
         if (els.situacao) els.situacao.value = ''
         if (els.categoria) els.categoria.value = ''
@@ -240,6 +352,7 @@ async function boot() {
       els.pagination?.setAttribute('hidden', 'true')
       renderSummary(out)
     } else {
+      if (els.btnMappedUnused) els.btnMappedUnused.hidden = true
       const isAll = pageSize === 'all'
       const start = isAll ? 0 : (page - 1) * (pageSize as number)
       const end = isAll ? out.length : start + (pageSize as number)
@@ -309,6 +422,11 @@ async function boot() {
     page = 1
     applyAndRender()
   })
+  els.stepSilic?.addEventListener('change', (e) => {
+    filtros.stepSilic = (e.target as HTMLSelectElement).value || ''
+    page = 1
+    applyAndRender()
+  })
   els.tipo?.addEventListener('change', (e) => {
     filtros.tipo = (e.target as HTMLSelectElement).value || ''
     page = 1
@@ -345,13 +463,24 @@ async function boot() {
   els.btnReset?.addEventListener('click', () => {
     if (els.q) els.q.value = ''
     if (els.processo) els.processo.value = ''
+    if (els.stepSilic) els.stepSilic.value = ''
     if (els.tipo) els.tipo.value = ''
     if (els.situacao) els.situacao.value = ''
     if (els.categoria) els.categoria.value = ''
-    filtros.q = filtros.processo = filtros.tipo = filtros.situacao = filtros.categoria = ''
+    filtros.q = filtros.processo = filtros.stepSilic = filtros.tipo = filtros.situacao = filtros.categoria = ''
     currentView = 'summary'
     page = 1
     applyAndRender()
+  })
+
+  els.btnMappedUnused?.addEventListener('click', () => {
+    const url = new URL(location.href)
+    const sp = new URLSearchParams()
+    sp.set('view', 'list')
+    sp.set('stepSilic', 'Definir')
+    sp.set('size', 'all')
+    url.search = sp.toString()
+    window.open(url.toString(), '_blank', 'noopener,noreferrer')
   })
 
   // Paginação: tamanho de página e navegação
@@ -386,11 +515,13 @@ async function boot() {
     const st = getURLState()
     if (els.q) els.q.value = st.q
     if (els.processo) els.processo.value = st.processo
+    if (els.stepSilic) els.stepSilic.value = st.stepSilic
     if (els.tipo) els.tipo.value = st.tipo
     if (els.situacao) els.situacao.value = st.situacao
     if (els.categoria) els.categoria.value = st.categoria
     filtros.q = st.q
     filtros.processo = st.processo
+    filtros.stepSilic = st.stepSilic
     filtros.tipo = st.tipo
     filtros.situacao = st.situacao
     filtros.categoria = st.categoria

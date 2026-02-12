@@ -1,0 +1,47 @@
+[
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Dados incompletos ou incorretos na demanda"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Falta justificativas do pedido"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Falta anexos obrigatórios"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Informações divergentes entre sistemas"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Tipo de demanda tratado incorretamente"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Dados conflitantes entre CELOG e CILOG"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Iniciais","motivo":"Informações iniciais incorretas ou incompletas","causa":"Demanda precisa de ajustes no pré-comprometimento"},
+
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Matrícula desatualizada ou vencida"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Matrícula incompleta"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Matrícula sem averbação necessária"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Falta averbação da construção"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Matrícula divergente do contrato"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Proprietário diferente da matrícula"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Matrícula / Cartório / Dados do imóvel","causa":"Falta habite-se"},
+
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Minuta / Cláusulas / Contrato","causa":"Minuta com cláusulas indevidas"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Minuta / Cláusulas / Contrato","causa":"Minuta incompatível com o negociado"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Minuta / Cláusulas / Contrato","causa":"Falta cláusula de alteração de titularidade"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Minuta / Cláusulas / Contrato","causa":"Multa rescisória com redação incorreta"},
+
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Área / Engenharia","causa":"Informações de área divergentes"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Área / Engenharia","causa":"Falta laudo de engenharia"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Área / Engenharia","causa":"Falta dados sobre acréscimo de área"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Contrato","motivo":"Documentos complementares","causa":"Falta Plano de Aquisições válido"},
+
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Locador","motivo":"Documentação do locador","causa":"Documentos dos locadores incompletos"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Locador","motivo":"Documentação do locador","causa":"Falta RG/CPF de cônjuge"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Locador","motivo":"Documentação do locador","causa":"Falta certidão de ISS"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Locador","motivo":"Conta bancária / Pagamentos","causa":"Conta em outro banco sem justificativa"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Locador","motivo":"Conta bancária / Pagamentos","causa":"Percentuais dos locadores não informados"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados do Locador","motivo":"Aceite / Concordância","causa":"Falta anuência do locador"},
+
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Representante Legal","motivo":"Representação insuficiente ou irregular","causa":"Falta contrato social atualizado"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Representante Legal","motivo":"Representação insuficiente ou irregular","causa":"Falta procuração válida"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Representante Legal","motivo":"Representação insuficiente ou irregular","causa":"Representante legal falecido sem substituição"},
+
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Negociação / Laudo / Ação Renovatória","causa":"Valor acima do laudo sem justificativa"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Negociação / Laudo / Ação Renovatória","causa":"Falta laudo para AR"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Negociação / Laudo / Ação Renovatória","causa":"Falta matrícula para AR"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Negociação / Laudo / Ação Renovatória","causa":"AR sem esclarecimento ou negociação"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Pendências jurídicas / CADIN","causa":"Locador com pendência no CADIN"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Pendências jurídicas / CADIN","causa":"Minuta rejeitada pelo jurídico"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Orçamento / Fluxo / Documentos operacionais","causa":"Falta tela de reserva orçamentária"},
+  {"processo":"Ato Formal","tipo":"locação","situação":"Prorrogação","bloco":"Dados Adicionais","motivo":"Orçamento / Fluxo / Documentos operacionais","causa":"Falta autorização da GELOG"}
+]

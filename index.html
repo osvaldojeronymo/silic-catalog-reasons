@@ -39,6 +39,11 @@
           <option value="">Todos os processos</option>
         </select>
 
+        <label for="stepSilic" class="sr-only">Etapa SILIC</label>
+        <select id="stepSilic" aria-label="Etapa SILIC">
+          <option value="">Todas as etapas SILIC</option>
+        </select>
+
         <label for="tipo" class="sr-only">Tipo</label>
         <select id="tipo" aria-label="Tipo">
           <option value="">Todos os tipos</option>
@@ -64,6 +69,7 @@
         </div>
         <div class="right">
           <span id="resultsInfo" class="results-info" aria-live="polite" role="status"></span>
+          <button id="btnMappedUnused" type="button" class="btn" hidden>Motivos mapeados - não utilizados</button>
           <button id="btnReset" type="button" class="btn btn-secondary" title="Limpar filtros">Limpar filtros</button>
           <button id="btnDensity" type="button" class="btn" title="Alternar modo compacto">Modo compacto</button>
         </div>

@@ -73,5 +73,16 @@ Workflow em `.github/workflows/ci.yml` com: install, typecheck, lint, unit, buil
 
 ## Dados
 
-O app consome `public/reasons.normalized.json`, que já está normalizado (minúsculas/sem acentos),
-reduzindo lógica de normalização no runtime.
+O app consome `public/reasons.unified.json`.
+
+Para (re)gerar os dados unificados e arquivos corrigidos:
+
+```bash
+npm run merge:reasons
+```
+
+Arquivos gerados:
+
+- `public/reasons.unified.json`
+- `public/reasons.normalized.fixed.json`
+- `public/motivos_tabela_completa.fixed.json`

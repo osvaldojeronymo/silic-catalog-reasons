@@ -25,6 +25,10 @@ const normalizeText = (value) =>
 		.trim()
 		.replace(/\s+/g, ' ');
 
+const EXCLUDED_DESCRICOES = new Set([
+	normalizeText('CI CILOG (Processo no SICLG incompleto/desorganizado)')
+]);
+
 function keyOf(entry) {
 	return [
 		normalizeText(entry.processo),
@@ -37,6 +41,10 @@ function keyOf(entry) {
 }
 
 const clean = (v) => String(v ?? '').trim();
+
+function shouldExclude(canonical) {
+	return EXCLUDED_DESCRICOES.has(normalizeText(canonical?.descricao));
+}
 
 function mapRow(row) {
 	// Mapeamento solicitado: A..G da planilha -> campos do JSON
@@ -101,7 +109,7 @@ async function main() {
 			index: i,
 			original: atosImportRows[i]
 		}))
-	];
+	].filter(({ canonical }) => !shouldExclude(canonical));
 
 	for (let i = 0; i < allCanonicalRows.length; i += 1) {
 		const { canonical, source, index, original } = allCanonicalRows[i];

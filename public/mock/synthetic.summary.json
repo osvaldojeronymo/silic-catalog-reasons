@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-20T13:59:17.682Z",
+  "generatedAt": "2026-02-20T17:36:45.195Z",
   "seed": 20260220,
   "targetCases": 10000,
   "periodo": "2025-01 a 2025-12",
-  "dimMotivos": 465,
+  "dimMotivos": 357,
   "dimUnidades": 18,
   "fatoDevolucoes": 10000,
   "observacao": "Dados sintéticos para análise gerencial (não representam produção)."

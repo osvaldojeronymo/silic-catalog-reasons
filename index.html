@@ -42,24 +42,20 @@
 
       <div class="grid" id="grid"></div>
 
-      <div class="pagination" id="pagination" hidden>
-        <div class="pagination-left">
-          <label for="pageSize" class="sr-only">Itens por página</label>
-          <select id="pageSize" aria-label="Itens por página">
-            <option value="5">5 por página</option>
-            <option value="10" selected>10 por página</option>
-            <option value="20">20 por página</option>
-            <option value="all">Todas</option>
-          </select>
-        </div>
-        <nav class="pagination-nav" aria-label="Paginação">
-          <button id="btnPrev" type="button" class="btn" aria-label="Página anterior">Anterior</button>
-          <div id="pageNumbers" class="page-numbers" role="list"></div>
-          <button id="btnNext" type="button" class="btn" aria-label="Próxima página">Próxima</button>
-        </nav>
-      </div>
-
     </main>
+
+    <footer class="app-footer" role="contentinfo">
+      <div class="app-footer-inner">
+        <section class="app-footer-col">
+          <h3>SILIC 2.0</h3>
+          <p>Soluções para todos os momentos.</p>
+        </section>
+        <section class="app-footer-col">
+          <h3>Contato</h3>
+          <p>silic@caixa.gov.br</p>
+        </section>
+      </div>
+    </footer>
 
     <!-- Apenas UM entrypoint; Vite cuidará do CSS importado no TS -->
     <script type="module" src="/src/main.ts"></script>

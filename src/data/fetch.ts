@@ -28,6 +28,12 @@ const normalizeCategoria = (value = '') => {
   return value
 }
 
+const capitalizeFirst = (value = '') => {
+  const s = value.trim()
+  if (!s) return ''
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
 export async function loadCatalog(): Promise<Catalogo> {
   const base = import.meta.env.BASE_URL
   const primaryUrl = base + 'reasons.mapeados-uso.json'
@@ -64,7 +70,7 @@ export async function loadCatalog(): Promise<Catalogo> {
           situacao: x.situacao ?? '',
           stepSilic: x.stepSilic ?? 'Definir',
           categoria: normalizeCategoria(x.categoria ?? ''),
-          descricao: x.descricao ?? '',
+          descricao: capitalizeFirst(x.descricao ?? ''),
           detalhes: x.detalhes ?? ''
         }))
     : []

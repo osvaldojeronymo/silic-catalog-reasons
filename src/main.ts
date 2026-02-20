@@ -70,6 +70,12 @@ const htmlEscape = (v: string) =>
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;')
 
+const capitalizeFirst = (value = '') => {
+  const s = value.trim()
+  if (!s) return ''
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
 function parseCsv(text: string): string[][] {
   const rows: string[][] = []
   let row: string[] = []
@@ -165,7 +171,7 @@ async function loadSyntheticBundle(): Promise<SyntheticBundle> {
     processo: r.processo || '',
     tipo: r.tipo || '',
     categoria: r.categoria || '',
-    descricao: r.descricao || '',
+    descricao: capitalizeFirst(r.descricao || ''),
     situacao: r.situacao || ''
   }))
 

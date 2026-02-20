@@ -76,6 +76,25 @@ const capitalizeFirst = (value = '') => {
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
+const normalizeCategoriaLabel = (value = '') => {
+  const s = value.trim()
+  if (!s) return ''
+  const n = s
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+  if (n === 'documentacao') return 'Documentação'
+  if (n === 'financeiro') return 'Financeiro'
+  if (n === 'processual') return 'Processual'
+  if (n === 'dados adicionais') return 'Dados Adicionais'
+  if (n === 'dados iniciais') return 'Dados Iniciais'
+  if (n === 'dados do contrato') return 'Dados do Contrato'
+  if (n === 'dados do locador') return 'Dados do Locador'
+  if (n === 'representante legal') return 'Representante Legal'
+  return capitalizeFirst(s)
+}
+
 function parseCsv(text: string): string[][] {
   const rows: string[][] = []
   let row: string[] = []
@@ -170,7 +189,7 @@ async function loadSyntheticBundle(): Promise<SyntheticBundle> {
     motivoId: Number(r.motivoId || 0),
     processo: r.processo || '',
     tipo: r.tipo || '',
-    categoria: r.categoria || '',
+    categoria: normalizeCategoriaLabel(r.categoria || ''),
     descricao: capitalizeFirst(r.descricao || ''),
     situacao: r.situacao || ''
   }))

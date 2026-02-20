@@ -20,7 +20,8 @@
     "test:cov": "vitest --run --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "merge:reasons": "node scripts/clean-and-merge.mjs"
+    "merge:reasons": "node scripts/clean-and-merge.mjs",
+    "mock:generate": "node scripts/generate-synthetic-reports-data.mjs"
   },
   "lint-staged": {
     "*.{ts,js,css,md}": [

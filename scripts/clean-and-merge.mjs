@@ -9,7 +9,9 @@ const root = path.resolve(here, '..');
 const files = {
 	motivosXlsx: path.join(root, 'public', 'assets', 'motivos_tabela_completa 1.xlsx'),
 	atosFormaisImport: path.join(root, 'public', 'assets', 'atos_formais_import.json'),
-	unified: path.join(root, 'public', 'reasons.unified.json')
+	unified: path.join(root, 'public', 'reasons.unified.json'),
+	mappedUso: path.join(root, 'public', 'reasons.mapeados-uso.json'),
+	mappedReserva: path.join(root, 'public', 'reasons.mapeados-reserva.json')
 };
 
 const stripDiacritics = (value) =>
@@ -172,7 +174,26 @@ async function main() {
 	};
 
 	await fs.writeFile(files.unified, JSON.stringify(unified, null, 2) + '\n', 'utf8');
+	await fs.writeFile(files.mappedUso, JSON.stringify(unified, null, 2) + '\n', 'utf8');
+
+	const emptyReserva = {
+		...unified,
+		schemaVersion: '3.0.0',
+		sourceMeta: {
+			...unified.sourceMeta,
+			segmento: 'reserva'
+		},
+		counts: {
+			...unified.counts,
+			unifiedDistinct: 0
+		},
+		unifiedByKey: []
+	};
+	await fs.writeFile(files.mappedReserva, JSON.stringify(emptyReserva, null, 2) + '\n', 'utf8');
+
 	console.log('OK: generated', path.relative(root, files.unified));
+	console.log('OK: generated', path.relative(root, files.mappedUso));
+	console.log('OK: generated', path.relative(root, files.mappedReserva));
 	console.log('OK: source rows', mapped.length, '+ import', mappedAtosImport.length, 'distinct', grouped.size);
 }
 

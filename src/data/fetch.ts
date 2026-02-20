@@ -14,10 +14,30 @@ const normalizeProcesso = (value = '') => {
   return value
 }
 
+const normalizeCategoria = (value = '') => {
+  const n = norm(value)
+  if (!n) return ''
+  if (n === 'documentacao') return 'Documentação'
+  if (n === 'financeiro') return 'Financeiro'
+  if (n === 'processual') return 'Processual'
+  if (n === 'dados adicionais') return 'Dados Adicionais'
+  if (n === 'dados iniciais') return 'Dados Iniciais'
+  if (n === 'dados do contrato') return 'Dados do Contrato'
+  if (n === 'dados do locador') return 'Dados do Locador'
+  if (n === 'representante legal') return 'Representante Legal'
+  return value
+}
+
 export async function loadCatalog(): Promise<Catalogo> {
-  const url = import.meta.env.BASE_URL + 'reasons.unified.json'
-  const res = await fetch(url, { cache: 'no-store' })
-  if (!res.ok) throw new Error('Falha ao carregar reasons.unified.json')
+  const base = import.meta.env.BASE_URL
+  const primaryUrl = base + 'reasons.mapeados-uso.json'
+  const legacyUrl = base + 'reasons.unified.json'
+
+  let res = await fetch(primaryUrl, { cache: 'no-store' })
+  if (!res.ok) {
+    res = await fetch(legacyUrl, { cache: 'no-store' })
+  }
+  if (!res.ok) throw new Error('Falha ao carregar catálogo de motivos')
 
   const raw = (await res.json()) as {
     sourceMeta?: { reasons?: { versao?: string } }
@@ -43,7 +63,7 @@ export async function loadCatalog(): Promise<Catalogo> {
           tipo: x.tipo ?? '',
           situacao: x.situacao ?? '',
           stepSilic: x.stepSilic ?? 'Definir',
-          categoria: x.categoria ?? '',
+          categoria: normalizeCategoria(x.categoria ?? ''),
           descricao: x.descricao ?? '',
           detalhes: x.detalhes ?? ''
         }))

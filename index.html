@@ -30,48 +30,13 @@
     </header>
 
   <main id="conteudo" class="main" tabindex="-1">
-      <div class="toolbar">
-        <label for="q" class="sr-only">Buscar</label>
-        <input id="q" type="search" placeholder="Buscar (processo, tipo, detalhes)…" aria-label="Buscar" />
-
-        <label for="processo" class="sr-only">Processo</label>
-        <select id="processo" aria-label="Processo">
-          <option value="">Todos os processos</option>
-        </select>
-
-        <label for="stepSilic" class="sr-only">Etapa SILIC</label>
-        <select id="stepSilic" aria-label="Etapa SILIC">
-          <option value="">Todas as etapas SILIC</option>
-        </select>
-
-        <label for="tipo" class="sr-only">Tipo</label>
-        <select id="tipo" aria-label="Tipo">
-          <option value="">Todos os tipos</option>
-        </select>
-
-        <label for="situacao" class="sr-only">Situação</label>
-        <select id="situacao" aria-label="Situação">
-          <option value="">Todas as situações</option>
-        </select>
-
-        <label for="categoria" class="sr-only">Categoria</label>
-        <select id="categoria" aria-label="Categoria">
-          <option value="">Todas as categorias</option>
-        </select>
-      </div>
-
-  <div id="activeChips" class="chips" aria-live="polite"></div>
-
       <div class="viewbar">
         <div class="left">
-          <button id="viewSummary" type="button" class="btn btn-ghost" aria-pressed="true">Resumo por categoria</button>
-          <button id="viewList" type="button" class="btn">Lista completa</button>
+          <button id="viewReports" type="button" class="btn btn-ghost" aria-pressed="true">Relatórios</button>
         </div>
         <div class="right">
           <span id="resultsInfo" class="results-info" aria-live="polite" role="status"></span>
-          <button id="btnMappedUnused" type="button" class="btn" hidden>Motivos mapeados - não utilizados</button>
-          <button id="btnReset" type="button" class="btn btn-secondary" title="Limpar filtros">Limpar filtros</button>
-          <button id="btnDensity" type="button" class="btn" title="Alternar modo compacto">Modo compacto</button>
+          <button id="btnMappedUnused" type="button" class="btn">Motivos mapeados em uso</button>
         </div>
       </div>
 

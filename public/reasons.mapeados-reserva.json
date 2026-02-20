@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "3.0.0",
+  "generatedAt": "2026-02-12T19:13:11.295Z",
+  "sourceMeta": {
+    "motivos": {
+      "format": "xlsx",
+      "sheet": "Sheet1",
+      "path": "public/assets/motivos_tabela_completa 1.xlsx",
+      "mapping": {
+        "A": "processo",
+        "B": "tipo",
+        "C": "situacao",
+        "D": "categoria",
+        "E": "descricao",
+        "F": "detalhes",
+        "G": "stepSilic"
+      }
+    },
+    "atosFormaisImport": {
+      "format": "json",
+      "path": "public/assets/atos_formais_import.json",
+      "mapping": {
+        "processo": "processo",
+        "tipo": "tipo",
+        "situação": "situacao",
+        "bloco": "categoria+stepSilic",
+        "motivo": "descricao",
+        "causa": "detalhes"
+      }
+    },
+    "segmento": "reserva"
+  },
+  "counts": {
+    "xlsxRows": 427,
+    "atosFormaisImportRows": 39,
+    "unifiedDistinct": 0
+  },
+  "unifiedByKey": []
+}

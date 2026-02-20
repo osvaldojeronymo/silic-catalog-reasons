@@ -1,0 +1,466 @@
+motivoId,ativo,processo,tipo,situacao,categoria,descricao,detalhes,stepSilic
+1,1,Ato Formal,locação,Prorrogação,Financeiro,Pré-comprometimento,A menor / não encaminhado /,Definir
+2,1,Ato Formal,locação,Prorrogação,Financeiro,ID Plano de Aquisições,Não identificado / não encaminhado,Definir
+3,1,Ato Formal,locação,Prorrogação,Financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Definir
+4,1,Ato Formal,locação,Prorrogação,Financeiro,Pagamento em favor de terceiros,Não há documentação que autoriza o pagamento a terceiros,Definir
+5,1,Ato Formal,locação,Prorrogação,Financeiro,Crédito para terceiros,Pagamento de locação a terceiros sem a documentação,Definir
+6,1,Ato Formal,locação,Prorrogação,Documentação,Documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor,Definir
+7,1,Ato Formal,locação,Prorrogação,Processual,Negociação entre as partes,Ausência das informações de negociação com o locador,Definir
+8,1,Ato Formal,locação,Prorrogação,Processual,Laudo de avaliação,Falta laudo de avaliação / vencido / sem assinatura,Definir
+9,1,Ato Formal,locação,Prorrogação,Processual,Laudo de avaliação,Prorrogação de vigência acima do valor do laudo de avaliação sem justificativa,Definir
+10,1,Ato Formal,locação,Prorrogação,Documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+11,1,Ato Formal,locação,Prorrogação,documentação,Impedimentos,Fornecedor com vedação/impedimento para prorrogar vigência contratual,Definir
+12,1,Ato Formal,locação,Prorrogação,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+13,1,contratação,cessão,mudança de endereço,Documentação,Documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor/documento que comprove posse,Definir
+14,1,contratação,cessão,mudança de endereço,Documentação,Documentos do imóvel,Averbação da área não identificada no RGI,Definir
+15,1,contratação,cessão,mudança de endereço,Documentação,Documentos do imóvel,Ausência de CND IPTU / documento vencido,Definir
+16,1,contratação,cessão,mudança de endereço,Documentação,Documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Definir
+17,1,contratação,cessão,mudança de endereço,Documentação,Documentos do imóvel,Inexistência de autorização de atividade bancária,Definir
+18,1,contratação,cessão,mudança de endereço,Documentação,Documentos do imóvel,Sublocação sem autorização/termo,Definir
+19,1,contratação,cessão,mudança de endereço,Documentação,Impedimentos,Ausência de certidão CND Federal / Certidão vencida,Definir
+20,1,contratação,cessão,mudança de endereço,Documentação,Impedimentos,Ausência da certidão de regularidade - CRF / CRF Vencido,Definir
+21,1,contratação,cessão,mudança de endereço,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Definir
+22,1,contratação,cessão,mudança de endereço,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Definir
+23,1,contratação,cessão,mudança de endereço,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Definir
+24,1,contratação,cessão,mudança de endereço,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+25,1,contratação,cessão,mudança de endereço,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Definir
+26,1,contratação,cessão,mudança de endereço,documentação,locador pessoa física,Representação legal/poderes não comprovados,Definir
+27,1,contratação,cessão,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Definir
+28,1,contratação,cessão,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Definir
+29,1,contratação,cessão,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da última versão do Contrato Social,Definir
+30,1,contratação,cessão,mudança de endereço,documentação,Locador Pessoa Jurídica,Documentos do cedente não assinados digitalmente,Definir
+31,1,contratação,cessão,mudança de endereço,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+32,1,contratação,cessão,mudança de endereço,documentação,Locador Pessoa Jurídica,Ata ou Termo de Posse do Representante Legal vigente,Definir
+33,1,contratação,cessão,mudança de endereço,financeiro,Dados Bancários,Informação de dados bancários em outro banco sem justificativa,Definir
+34,1,contratação,cessão,mudança de endereço,Financeiro,Dados Bancários,Falta informação dos dados bancários,Definir
+35,1,contratação,cessão,mudança de endereço,Financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Definir
+36,1,contratação,cessão,mudança de endereço,Financeiro,Índice de correção do contrato,Não identificado o índice de correção do contrato,Definir
+37,1,contratação,cessão,mudança de endereço,Financeiro,Pré-comprometimento,A menor / não encaminhado / não dividido conforme calendário de pagamento,Definir
+38,1,contratação,cessão,mudança de endereço,Processual,À pedido,Por solicitação do gestor operacional,Definir
+39,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Falta esclarecer a relação custo x benefício,Definir
+40,1,contratação,cessão,mudança de endereço,Processual,Informações conflitantes,Erro na descrição do objeto da demanda,Definir
+41,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Definir
+42,1,contratação,cessão,mudança de endereço,processual,Informações ausentes,Falta informação da aderência ao plano estratégico,Definir
+43,1,contratação,cessão,mudança de endereço,Processual,Informações divergentes,Divergência nas informações do imóvel nos documentos da demanda (RTA/OBJETO),Definir
+44,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Falta informação de partes relacionadas,Definir
+45,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Ausência de informação acerca de contratação em ano eleitoral para cessão sem ônus,Definir
+46,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Ausência das razões da escolha do fornecedor,Definir
+47,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Ausência da informação gerais do contrato (carência de pagamento / contato do cedente / vigência da contratação / Valor da contratação / Prazo de obras),Definir
+48,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Ausência da justificativa da contratação,Definir
+49,1,contratação,cessão,mudança de endereço,Processual,Informações conflitantes,Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Definir
+50,1,contratação,cessão,mudança de endereço,Processual,Informações ausentes,Ausência de informações das cláusulas mitigadoras dos riscos,Definir
+51,1,contratação,cessão,mudança de endereço,Processual,Informações conflitantes,Prazo inferior a 12 meses,Definir
+52,1,contratação,cessão,mudança de endereço,Processual,Documentos de autorização,Ausência de CE GEFIC (erro na CI/falta assinatura),Definir
+53,1,contratação,cessão,mudança de endereço,Processual,Documentos de autorização,Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes),Definir
+54,1,contratação,cessão,mudança de endereço,Processual,Documentos de autorização,Ausência de autorização/aprovação da SR/SEV,Definir
+55,1,contratação,cessão,mudança de endereço,Processual,Documentos técnicos,Ausência de RTA (dados divergentes/sem informações),Definir
+56,1,contratação,cessão,mudança de endereço,Processual,Documentos técnicos,Ausência de Parecer Técnico CAIXA,Definir
+57,1,contratação,cessão,mudança de endereço,Processual,Documentos ausentes,Ausência das informações de negociação com o cedente,Definir
+58,1,contratação,cessão,mudança de endereço,Processual,Documentos ausentes,Ausência do anexo/informações de responsabilidade do locador,Definir
+59,1,contratação,cessão,mudança de endereço,Processual,Documentos ausentes,Ausência de justificativa do investimento não recuperável,Definir
+60,1,contratação,cessão,mudança de endereço,Processual,Documentos técnicos,Laudo de vistoria ausente (técnico),Definir
+61,1,contratação,cessão,mudança de endereço,Processual,Documentos técnicos,Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano,Definir
+62,1,contratação,cessão,nova unidade,Documentação,Documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor/documento que comprove posse,Definir
+63,1,contratação,cessão,nova unidade,Documentação,Documentos do imóvel,Averbação da área não identificada no RGI,Definir
+64,1,contratação,cessão,nova unidade,Documentação,Documentos do imóvel,Ausência de CND IPTU / documento vencido,Definir
+65,1,contratação,cessão,nova unidade,Documentação,Documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Definir
+66,1,contratação,cessão,nova unidade,Documentação,Documentos do imóvel,Inexistência de autorização de atividade bancária,Definir
+67,1,contratação,cessão,nova unidade,Documentação,Documentos do imóvel,Sublocação sem autorização/termo,Definir
+68,1,contratação,cessão,nova unidade,Documentação,Impedimentos,Ausência de certidão CND Federal / Certidão vencida,Definir
+69,1,contratação,cessão,nova unidade,Documentação,Impedimentos,Ausência da certidão de regularidade - CRF / CRF Vencido,Definir
+70,1,contratação,cessão,nova unidade,Documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Definir
+71,1,contratação,cessão,nova unidade,Documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Definir
+72,1,contratação,cessão,nova unidade,Documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Definir
+73,1,contratação,cessão,nova unidade,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+74,1,contratação,cessão,nova unidade,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Definir
+75,1,contratação,cessão,nova unidade,documentação,locador pessoa física,Representação legal/poderes não comprovados,Definir
+76,1,contratação,cessão,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Definir
+77,1,contratação,cessão,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Definir
+78,1,contratação,cessão,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da última versão do Contrato Social,Definir
+79,1,contratação,cessão,nova unidade,documentação,Locador Pessoa Jurídica,Documentos do cedente não assinados digitalmente,Definir
+80,1,contratação,cessão,nova unidade,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+81,1,contratação,cessão,nova unidade,documentação,Locador Pessoa Jurídica,Ata ou Termo de Posse do Representante Legal vigente,Definir
+82,1,contratação,cessão,nova unidade,financeiro,Dados Bancários,Informação de dados bancários em outro banco sem justificativa,Definir
+83,1,contratação,cessão,nova unidade,financeiro,Dados Bancários,falta informação dos dados bancários,Definir
+84,1,contratação,cessão,nova unidade,financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Definir
+85,1,contratação,cessão,nova unidade,financeiro,Índice de correção do contrato,não identificado o índice de correção do contrato,Definir
+86,1,contratação,cessão,nova unidade,financeiro,Pré-comprometimento,a menor / não encaminhado / não dividido conforme calendário de pagamento,Definir
+87,1,contratação,cessão,nova unidade,processual,À pedido,Por solicitação do gestor operacional,Definir
+88,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Definir
+89,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Definir
+90,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Definir
+91,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Definir
+92,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda (RTA/OBJETO),Definir
+93,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Definir
+94,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Definir
+95,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informação acerca de contratação em ano eleitoral para cessão sem ônus,Definir
+96,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Definir
+97,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (carência de pagamento / contato do cedente / vigência da contratação / Valor da contratação / Prazo de obras),Definir
+98,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Definir
+99,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Definir
+100,1,contratação,cessão,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informações das cláusulas mitigadoras dos riscos,Definir
+101,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência de CE GEFIC (erro na CI/falta assinatura),Definir
+102,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Falta autorização para abertura de nova unidade (Resolução),Definir
+103,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes),Definir
+104,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência de autorização/aprovação da SR/SEV,Definir
+105,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência de RTA (dados divergentes/sem informações),Definir
+106,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência de Parecer Técnico CAIXA,Definir
+107,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência das informações de negociação com o cedente,Definir
+108,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência do anexo/informações de responsabilidade do locador,Definir
+109,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Ausência de justificativa do investimento não recuperável,Definir
+110,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Laudo de vistoria ausente (técnico),Definir
+111,1,contratação,cessão,nova unidade,processual,Documentos internos demanda,Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano,Definir
+112,1,contratação,cessão,regularização,documentação,documentos do imóvel,Sublocação sem autorização/termo,Definir
+113,1,contratação,cessão,regularização,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Definir
+114,1,contratação,cessão,regularização,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Definir
+115,1,contratação,cessão,regularização,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Definir
+116,1,contratação,cessão,regularização,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+117,1,contratação,cessão,regularização,documentação,locador pessoa física,troca de titularidade sem os documentos identificação (RG/CPF),Definir
+118,1,Ato formal,cessão,Alteraçãod e Titularidade,documentação,locador pessoa física,troca de titularidade sem os documentos identificação (RG/CPF),Definir
+119,1,contratação,cessão,regularização,documentação,locador pessoa física,Representação legal/poderes não comprovados,Definir
+120,1,contratação,cessão,regularização,documentação,Locador Pessoa Jurídica,troca de titularidade sem a apresentação certidão simplificada da junta comercial,Definir
+121,1,contratação,cessão,regularização,documentação,Locador Pessoa Jurídica,troca de titularidade sem os documentos identificação (RG/CPF),Definir
+122,1,contratação,cessão,regularização,documentação,Locador Pessoa Jurídica,troca de titularidade sem apresentação da última versão do Contrato Social,Definir
+123,1,contratação,cessão,regularização,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+124,1,contratação,cessão,regularização,financeiro,Dados Bancários,Informação de dados bancários em outro banco sem justificativa,Definir
+125,1,contratação,cessão,regularização,financeiro,Dados Bancários,falta informação dos dados bancários,Definir
+126,1,contratação,cessão,regularização,financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Definir
+127,1,contratação,cessão,regularização,financeiro,Índice de correção do contrato,não identificado o índice de correção do contrato,Definir
+128,1,contratação,cessão,regularização,financeiro,Pré-comprometimento,a menor / não encaminhado / não dividido conforme calendário de pagamento,Definir
+129,1,contratação,cessão,regularização,processual,À pedido,Por solicitação do gestor operacional,Definir
+130,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Definir
+131,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Definir
+132,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Definir
+133,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Definir
+134,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda,Definir
+135,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Definir
+136,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Definir
+137,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informação acerca de contratação em ano eleitoral para cessão sem ônus,Definir
+138,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Definir
+139,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (carência de pagamento / contato do cedente / vigência da contratação / Valor da contratação / Prazo de obras),Definir
+140,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Definir
+141,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Definir
+142,1,contratação,cessão,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informações das cláusulas mitigadoras dos riscos,Definir
+143,1,contratação,cessão,regularização,processual,Documentos internos demanda,Ausência das informações de negociação com o locador,Definir
+144,1,contratação,cessão,regularização,processual,Documentos internos demanda,Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano,Definir
+145,1,contratação,comodato,mudança de endereço,documentação,documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor,Definir
+146,1,contratação,comodato,mudança de endereço,documentação,documentos do imóvel,Averbação da área não identificada no RGI/falta habite-se,Definir
+147,1,contratação,comodato,mudança de endereço,documentação,documentos do imóvel,Ausência de CND IPTU / documento vencido,Definir
+148,1,contratação,comodato,mudança de endereço,documentação,documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Definir
+149,1,contratação,comodato,mudança de endereço,documentação,documentos do imóvel,Inexistência de autorização de atividade bancária,Definir
+150,1,contratação,comodato,mudança de endereço,documentação,documentos do imóvel,Sublocação sem autorização/termo,Definir
+151,1,contratação,comodato,mudança de endereço,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Definir
+152,1,contratação,comodato,mudança de endereço,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Definir
+153,1,contratação,comodato,mudança de endereço,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Definir
+154,1,contratação,comodato,mudança de endereço,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+155,1,contratação,comodato,mudança de endereço,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Definir
+156,1,contratação,comodato,mudança de endereço,documentação,locador pessoa física,Representação legal/poderes não comprovados,Definir
+157,1,contratação,comodato,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Definir
+158,1,contratação,comodato,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Definir
+159,1,contratação,comodato,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da última versão do Contrato Social,Definir
+160,1,contratação,comodato,mudança de endereço,documentação,Locador Pessoa Jurídica,Documentos do locador não assinados digitalmente,Definir
+161,1,contratação,comodato,mudança de endereço,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+162,1,contratação,comodato,mudança de endereço,processual,À pedido,Por solicitação do gestor operacional,Definir
+163,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Definir
+164,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Definir
+165,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Definir
+166,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Definir
+167,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO),Definir
+168,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Definir
+169,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Definir
+170,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Definir
+171,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (contato do comodante / vigência da contratação / Prazo de obras),Definir
+172,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Definir
+173,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Propostas recusadas não justificadas,Definir
+174,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Definir
+175,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informações das cláusulas mitigadoras dos riscos,Definir
+176,1,contratação,comodato,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Contrato com prazo menor que 60 meses sem justificativa,Definir
+177,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência de CE GEFIC (erro na CI/falta assinatura),Definir
+178,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes),Definir
+179,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência de autorização/aprovação da SR/SEV,Definir
+180,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência de RTA (dados divergentes/sem informações),Definir
+181,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência de Parecer Técnico CAIXA,Definir
+182,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência das informações de negociação com o comadante,Definir
+183,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência das Propostas de imóveis,Definir
+184,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência do anexo/informações de responsabilidade do comodante,Definir
+185,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Ausência de justificativa do investimento não recuperável,Definir
+186,1,contratação,comodato,mudança de endereço,processual,Documentos internos demanda,Laudo de vistoria ausente (técnico),Definir
+187,1,contratação,comodato,nova unidade,documentação,documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor,Definir
+188,1,contratação,comodato,nova unidade,documentação,documentos do imóvel,Averbação da área não identificada no RGI/falta habite-se,Definir
+189,1,contratação,comodato,nova unidade,documentação,documentos do imóvel,Ausência de CND IPTU / documento vencido,Definir
+190,1,contratação,comodato,nova unidade,documentação,documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Definir
+191,1,contratação,comodato,nova unidade,documentação,documentos do imóvel,Inexistência de autorização de atividade bancária,Definir
+192,1,contratação,comodato,nova unidade,documentação,documentos do imóvel,Sublocação sem autorização/termo,Definir
+193,1,contratação,comodato,nova unidade,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Definir
+194,1,contratação,comodato,nova unidade,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Definir
+195,1,contratação,comodato,nova unidade,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Definir
+196,1,contratação,comodato,nova unidade,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+197,1,contratação,comodato,nova unidade,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Definir
+198,1,contratação,comodato,nova unidade,documentação,locador pessoa física,Representação legal/poderes não comprovados,Definir
+199,1,contratação,comodato,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Definir
+200,1,contratação,comodato,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Definir
+201,1,contratação,comodato,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da última versão do Contrato Social,Definir
+202,1,contratação,comodato,nova unidade,documentação,Locador Pessoa Jurídica,Documentos do locador não assinados digitalmente,Definir
+203,1,contratação,comodato,nova unidade,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+204,1,contratação,comodato,nova unidade,processual,À pedido,Por solicitação do gestor operacional,Definir
+205,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Definir
+206,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Definir
+207,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Definir
+208,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Definir
+209,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO),Definir
+210,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Definir
+211,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Definir
+212,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Definir
+213,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (contato do comodante / vigência da contratação / Prazo de obras),Definir
+214,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Definir
+215,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Propostas recusadas não justificadas,Definir
+216,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Definir
+217,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informações das cláusulas mitigadoras dos riscos,Definir
+218,1,contratação,comodato,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Contrato com prazo menor que 60 meses sem justificativa,Definir
+219,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência de CE GEFIC (erro na CI/falta assinatura),Definir
+220,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Falta autorização para abertura de nova unidade (Resolução),Definir
+221,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes),Definir
+222,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência de autorização/aprovação da SR/SEV,Definir
+223,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência de RTA (dados divergentes/sem informações),Definir
+224,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência de Parecer Técnico CAIXA,Definir
+225,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência das informações de negociação com o comadante,Definir
+226,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência das Propostas de imóveis,Definir
+227,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência do anexo/informações de responsabilidade do comodante,Definir
+228,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Ausência de justificativa do investimento não recuperável,Definir
+229,1,contratação,comodato,nova unidade,processual,Documentos internos demanda,Laudo de vistoria ausente (técnico),Definir
+230,1,contratação,comodato,regularização,documentação,documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor/CRI vencida,Definir
+231,1,contratação,comodato,regularização,documentação,documentos do imóvel,Averbação da área não identificada no RGI/falta habite-se,Definir
+232,1,contratação,comodato,regularização,documentação,documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Definir
+233,1,contratação,comodato,regularização,documentação,documentos do imóvel,Sublocação sem autorização/termo,Definir
+234,1,contratação,comodato,regularização,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Definir
+235,1,contratação,comodato,regularização,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Definir
+236,1,contratação,comodato,regularização,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Definir
+237,1,contratação,comodato,regularização,documentação,Impedimentos,Locador com inscrição no CADIN,Definir
+238,1,contratação,comodato,regularização,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Definir
+239,1,contratação,comodato,regularização,documentação,locador pessoa física,Representação legal/poderes não comprovados,Definir
+240,1,contratação,comodato,regularização,documentação,Locador Pessoa Jurídica,Ausência do CNPJ do comandante,Definir
+241,1,contratação,comodato,regularização,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Definir
+242,1,contratação,comodato,regularização,documentação,Locador Pessoa Jurídica,Documentos do locador não assinados digitalmente,Definir
+243,1,contratação,comodato,regularização,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Definir
+244,1,contratação,comodato,regularização,processual,À pedido,Por solicitação do gestor operacional,Definir
+245,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Definir
+246,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Definir
+247,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Definir
+248,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Definir
+249,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Definir
+250,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Definir
+251,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Definir
+252,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (contato do comodante / vigência da contratação / Prazo de obras),Definir
+253,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Definir
+254,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Definir
+255,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informações das cláusulas mitigadoras dos riscos,Definir
+256,1,contratação,comodato,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Contrato com prazo menor que 60 meses sem justificativa,Definir
+257,1,contratação,comodato,regularização,processual,Documentos internos demanda,Ausência das informações de negociação com o comadante,Definir
+258,1,contratação,locação,mudança de endereço,documentação,documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor,Documentação do imóvel
+259,1,contratação,locação,mudança de endereço,documentação,documentos do imóvel,Averbação da área não identificada no RGI/falta habite-se,Documentação do imóvel
+260,1,contratação,locação,mudança de endereço,documentação,documentos do imóvel,Ausência de CND IPTU / documento vencido,Documentação do imóvel
+261,1,contratação,locação,mudança de endereço,documentação,documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Documentação do imóvel
+262,1,contratação,locação,mudança de endereço,documentação,documentos do imóvel,Inexistência de autorização de atividade bancária,Documentação do imóvel
+263,1,contratação,locação,mudança de endereço,documentação,documentos do imóvel,Sublocação sem autorização/termo,Documentação do imóvel
+264,1,contratação,locação,mudança de endereço,documentação,Impedimentos,Ausência de certidão CND Federal / Certidão vencida,Etapa tratamento de demanda - Conformidade - Reg. Locador
+265,1,contratação,locação,mudança de endereço,documentação,Impedimentos,Ausência da certidão de regularidade - CRF / CRF Vencido,Etapa tratamento de demanda - Conformidade - Reg. Locador
+266,1,contratação,locação,mudança de endereço,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Etapa tratamento de demanda - Conformidade - Reg. Locador
+267,1,contratação,locação,mudança de endereço,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Etapa tratamento de demanda - Conformidade - Reg. Locador
+268,1,contratação,locação,mudança de endereço,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Etapa tratamento de demanda - Conformidade - Reg. Locador
+269,1,contratação,locação,mudança de endereço,documentação,Impedimentos,Locador com inscrição no CADIN,Etapa tratamento de demanda - Conformidade - Reg. Locador
+270,1,contratação,locação,mudança de endereço,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Documentação do locador
+271,1,contratação,locação,mudança de endereço,documentação,locador pessoa física,Representação legal/poderes não comprovados,Documentação do locador
+272,1,contratação,locação,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Documentação do locador
+273,1,contratação,locação,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Documentação do locador
+274,1,contratação,locação,mudança de endereço,documentação,Locador Pessoa Jurídica,Ausência da última versão do Contrato Social,Documentação do locador
+275,1,contratação,locação,mudança de endereço,documentação,Locador Pessoa Jurídica,Documentos do locador não assinados digitalmente,Documentação do locador
+276,1,contratação,locação,mudança de endereço,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Documentação do locador
+277,1,contratação,locação,mudança de endereço,financeiro,Dados Bancários,Informação de dados bancários em outro banco sem justificativa,Documentação do locador
+278,1,contratação,locação,mudança de endereço,financeiro,Dados Bancários,falta informação dos dados bancários,Documentação do locador
+279,1,contratação,locação,mudança de endereço,financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Autorizações e laudo
+280,1,contratação,locação,mudança de endereço,financeiro,ID Plano de Aquisições,não identificado / outra unidade,Autorizações e laudo
+281,1,contratação,locação,mudança de endereço,financeiro,Índice de correção do contrato,não identificado o índice de correção do contrato,Autorizações e laudo
+282,1,contratação,locação,mudança de endereço,financeiro,Pagamento em favor de terceiros,Não há documentação que autoriza o pagamento a terceiros,Documentação do locador
+283,1,contratação,locação,mudança de endereço,financeiro,Pré-comprometimento,a menor / não encaminhado / não dividido conforme calendário de pagamento,Autorizações e laudo
+284,1,contratação,locação,mudança de endereço,processual,À pedido,Por solicitação do gestor operacional,Definir
+285,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Autorizações e laudo
+286,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Tela antes dos steps
+287,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Autorizações e laudo
+288,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Autorizações e laudo
+289,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO),Autorizações e laudo
+290,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Documentação do locador
+291,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Excluir
+292,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Autorizações e laudo
+293,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (carência de pagamento / contato do locador/cedente / vigência da contratação / Valor da contratação / Prazo de obras),Autorizações e laudo
+294,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Autorizações e laudo
+295,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Propostas recusadas não justificadas,Propostas
+296,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Autorizações e laudo
+297,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Auseência de informações das cláusulas mitigadoras dos riscos,Autorizações e laudo
+298,1,contratação,locação,mudança de endereço,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Contrato com prazo menor que 60 meses sem justificativa,Autorizações e laudo
+299,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência de CE GEFIC (erro na CI/falta assinatura),Autorizações e laudo
+300,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes),Autorizações e laudo
+301,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência de autorização/aprovação da SR/SEV,Autorizações e laudo
+302,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência de RTA (dados divergentes/sem informações),Autorizações e laudo
+303,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência de Parecer Técnico CAIXA,Autorizações e laudo
+304,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência das informações de negociação com o locador,Autorizações e laudo
+305,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência das Propostas de imóveis,Propostas
+306,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência do anexo/informações de responsabilidade do locador,Autorizações e laudo
+307,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Ausência de justificativa do investimento não recuperável,Autorizações e laudo
+308,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Laudo de vistoria ausente (técnico),Autorizações e laudo
+309,1,contratação,locação,mudança de endereço,processual,Documentos internos demanda,Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano,Autorizações e laudo
+310,1,contratação,locação,mudança de endereço,processual,Laudo de avaliação,Falta laudode avaliação de valor venal para contratação de imóveis acima 550m2,Autorizações e laudo
+311,1,contratação,locação,mudança de endereço,processual,Laudo de avaliação,Falta laudo de avaliação / vencido / sem assinatura,Autorizações e laudo
+312,1,contratação,locação,mudança de endereço,processual,Laudo de avaliação,Contratação acima do valor do laudo de avaliação sem justificativa,Autorizações e laudo
+313,1,contratação,locação,mudança de endereço,processual,Publicação,Área da publicação divergente da localização contratação,Propostas
+314,1,contratação,locação,mudança de endereço,processual,Publicação,Falta publicação (publicação em desconformidade normativa),Propostas
+315,1,contratação,locação,nova unidade,documentação,documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor,Documentação do imóvel
+316,1,contratação,locação,nova unidade,documentação,documentos do imóvel,Averbação da área não identificada no RGI/falta habite-se,Documentação do imóvel
+317,1,contratação,locação,nova unidade,documentação,documentos do imóvel,Ausência de CND IPTU / documento vencido,Documentação do imóvel
+318,1,contratação,locação,nova unidade,documentação,documentos do imóvel,Justificar que o imóvel está livre e desembaraçado de ônus,Documentação do imóvel
+319,1,contratação,locação,nova unidade,documentação,documentos do imóvel,Inexistência de autorização de atividade bancária,Documentação do imóvel
+320,1,contratação,locação,nova unidade,documentação,documentos do imóvel,Sublocação sem autorização/termo,Documentação do imóvel
+321,1,contratação,locação,nova unidade,documentação,Impedimentos,Ausência de certidão CND Federal / Certidão vencida,Documentação do locador
+322,1,contratação,locação,nova unidade,documentação,Impedimentos,Ausência da certidão de regularidade - CRF / CRF Vencido,Documentação do locador
+323,1,contratação,locação,nova unidade,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Etapa tratamento de demanda - Conformidade - Reg. Locador
+324,1,contratação,locação,nova unidade,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Etapa tratamento de demanda - Conformidade - Reg. Locador
+325,1,contratação,locação,nova unidade,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Etapa tratamento de demanda - Conformidade - Reg. Locador
+326,1,contratação,locação,nova unidade,documentação,Impedimentos,Locador com inscrição no CADIN,Etapa tratamento de demanda - Conformidade - Reg. Locador
+327,1,contratação,locação,nova unidade,documentação,locador pessoa física,Ausência de identificação dos documentos identificação (RG/CPF),Documentação do locador
+328,1,contratação,locação,nova unidade,documentação,locador pessoa física,Representação legal/poderes não comprovados,Documentação do locador
+329,1,contratação,locação,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Documentação do locador
+330,1,contratação,locação,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da documentação de identificação sócios (RG/CPF),Documentação do locador
+331,1,contratação,locação,nova unidade,documentação,Locador Pessoa Jurídica,Ausência da última versão do Contrato Social,Documentação do locador
+332,1,contratação,locação,nova unidade,documentação,Locador Pessoa Jurídica,Documentos do locador não assinados digitalmente,Documentação do locador
+333,1,contratação,locação,nova unidade,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Documentação do locador
+334,1,contratação,locação,nova unidade,financeiro,Dados Bancários,Informação de dados bancários em outro banco sem justificativa,Documentação do locador
+335,1,contratação,locação,nova unidade,financeiro,Dados Bancários,falta informação dos dados bancários,Documentação do locador
+336,1,contratação,locação,nova unidade,financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Autorizações e laudo
+337,1,contratação,locação,nova unidade,financeiro,ID Plano de Aquisições,não identificado / outra unidade,Autorizações e laudo
+338,1,contratação,locação,nova unidade,financeiro,Índice de correção do contrato,não identificado o índice de correção do contrato,Autorizações e laudo
+339,1,contratação,locação,nova unidade,financeiro,Pagamento em favor de terceiros,Não há documentação que autoriza o pagamento a terceiros,Documentação do locador
+340,1,contratação,locação,nova unidade,financeiro,Pré-comprometimento,a menor / não encaminhado / não dividido conforme calendário de pagamento,Documentação do locador
+341,1,contratação,locação,nova unidade,processual,À pedido,Por solicitação do gestor operacional,Definir
+342,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Autorizações e laudo
+343,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Tela antes dos steps
+344,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Autorizações e laudo
+345,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Autorizações e laudo
+346,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO),Autorizações e laudo
+347,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Documentação do locador
+348,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Excluir
+349,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Propostas
+350,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (carência de pagamento / contato do locador/cedente / vigência da contratação / Valor da contratação / Prazo de obras),Autorizações e laudo
+351,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Autorizações e laudo
+352,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Propostas recusadas não justificadas,Propostas
+353,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Autorizações e laudo (ver se tem campo de multa)
+354,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Auseência de informações das cláusulas mitigadoras dos riscos,Autorizações e laudo
+355,1,contratação,locação,nova unidade,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Contrato com prazo menor que 60 meses sem justificativa,Autorizações e laudo
+356,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência de CE GEFIC (erro na CI/falta assinatura),Autorizações e laudo
+357,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Falta autorização para abertura de nova unidade (Resolução),Autorizações e laudo
+358,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência de CE GELOG (erro na CI/falta assinatura/dados divergentes),Autorizações e laudo
+359,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência de autorização/aprovação da SR/SEV,Autorizações e laudo
+360,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência de RTA (dados divergentes/sem informações),Autorizações e laudo
+361,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência de Parecer Técnico CAIXA,Autorizações e laudo
+362,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência das informações de negociação com o locador,Autorizações e laudo
+363,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência das Propostas de imóveis,Propostas
+364,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência do anexo/informações de responsabilidade do locador,Autorizações e laudo
+365,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Ausência de justificativa do investimento não recuperável,Autorizações e laudo
+366,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Laudo de vistoria ausente (técnico),Autorizações e laudo
+367,1,contratação,locação,nova unidade,processual,Documentos internos demanda,Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano,Autorizações e laudo
+368,1,contratação,locação,nova unidade,processual,Laudo de avaliação,Falta laudode avaliação de valor venal para contratação de imóveis acima 550m2,Autorizações e laudo
+369,1,contratação,locação,nova unidade,processual,Laudo de avaliação,Falta laudo de avaliação / vencido / sem assinatura,Autorizações e laudo
+370,1,contratação,locação,nova unidade,processual,Laudo de avaliação,Contratação acima do valor do laudo de avaliação sem justificativa,Autorizações e laudo
+371,1,contratação,locação,nova unidade,processual,Publicação,Área da publicação divergente da localização contratação,Propostas
+372,1,contratação,locação,nova unidade,processual,Publicação,Falta publicação (publicação em desconformidade normativa),Propostas
+373,1,contratação,locação,regularização,documentação,documentos do imóvel,Ausência do registro do imóvel/Certidão inteiro teor / registro do imóvel/CRI fora da validade,Documentação do imóvel
+374,1,contratação,locação,regularização,documentação,documentos do imóvel,Averbação da área não identificada no RGI/falta habite-se,Documentação do imóvel
+375,1,contratação,locação,regularização,documentação,documentos do imóvel,Sublocação sem autorização/termo,Documentação do imóvel
+376,1,contratação,locação,regularização,documentação,Impedimentos,Fornecedor com vedação/impedimento para contratar,Etapa tratamento de demanda - Conformidade - Reg. Locador
+377,1,contratação,locação,regularização,documentação,Impedimentos,Risco de nepotismo/relacionamento vedado,Etapa tratamento de demanda - Conformidade - Reg. Locador
+378,1,contratação,locação,regularização,documentação,Impedimentos,Listas restritivas (setor público/trabalho escravo/risco de imagem),Etapa tratamento de demanda - Conformidade - Reg. Locador
+379,1,contratação,locação,regularização,documentação,Impedimentos,Locador com inscrição no CADIN / Sem justificativa de contratação pela CELOG,Etapa tratamento de demanda - Conformidade - Reg. Locador
+380,1,contratação,locação,regularização,documentação,Impedimentos,Falta estipular cláusula contratual para apresentação da regularidade,Etapa tratamento de demanda - Conformidade - Reg. Locador
+381,1,contratação,locação,regularização,documentação,locador pessoa física,Troca de titularidade sem apresentação dos documentos identificação (RG/CPF),Documentação do locador
+382,1,contratação,locação,regularização,documentação,locador pessoa física,Representação legal/poderes não comprovados,Documentação do locador
+383,1,contratação,locação,regularização,documentação,Locador Pessoa Jurídica,Ausência da certidão simplificada da junta comercial,Documentação do locador
+384,1,contratação,locação,regularização,documentação,Locador Pessoa Jurídica,troca de titularidade sem documentação de identificação sócios (RG/CPF),Documentação do locador
+385,1,contratação,locação,regularização,documentação,Locador Pessoa Jurídica,troca de titularidade sem a última versão do Contrato Social,Documentação do locador
+386,1,contratação,locação,regularização,documentação,Locador Pessoa Jurídica,Representação legal/poderes não comprovados,Documentação do locador
+387,1,contratação,locação,regularização,financeiro,Dados Bancários,Informação de dados bancários em outro banco sem justificativa,Documentação do locador
+388,1,contratação,locação,regularização,financeiro,Dados Bancários,falta informação dos dados bancários,Documentação do locador
+389,1,contratação,locação,regularização,financeiro,Falta ateste GEORC,Contratação acima de 3 milhões,Autorizações e laudo
+390,1,contratação,locação,regularização,financeiro,ID Plano de Aquisições,não identificado / outra unidade,Autorizações e laudo
+391,1,contratação,locação,regularização,financeiro,Índice de correção do contrato,não identificado o índice de correção do contrato,Autorizações e laudo
+392,1,contratação,locação,regularização,financeiro,Pagamento em favor de terceiros,Não há documentação que autoriza o pagamento a terceiros,Documentação do locador
+393,1,contratação,locação,regularização,financeiro,Pré-comprometimento,a menor / não encaminhado / não dividido conforme calendário de pagamento,Documentação do locador
+394,1,contratação,locação,regularização,processual,À pedido,Por solicitação do gestor operacional,Definir
+395,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta esclarecer a relação custo x benefício,Autorizações e laudo
+396,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Erro na descrição do objeto da demanda,Tela antes dos steps
+397,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),"Falta grau de criticidade / informação do Grau de Sigilo, segurança e tratamento de dados",Autorizações e laudo
+398,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação da aderência ao plano estratégico,Autorizações e laudo
+399,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Divergência nas informações do imóvel nos documentos da demanda (RTA/LAUDO/OBJETO),Autorizações e laudo
+400,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta informação de partes relacionadas,Documentação do locador
+401,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Falta a CI CILOG (não assinada / não anexada),Excluir
+402,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informação acerca de contratação em ano eleitoral,Autorizações e laudo
+403,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência das razões da escolha do fornecedor,Autorizações e laudo
+404,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da informação gerais do contrato (carência de pagamento / contato do locador/cedente / vigência da contratação / Valor da contratação / Prazo de obras),Autorizações e laudo
+405,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência da justificativa da contratação,Autorizações e laudo
+406,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Multa pela rescisão do contrato fora dos parâmetros normativos - cláusula em desacordo sem justificativa,Autorizações e laudo
+407,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Ausência de informações das cláusulas mitigadoras dos riscos,Autorizações e laudo
+408,1,contratação,locação,regularização,processual,CI CILOG (Processo no SICLG incompleto/desorganizado),Contrato com prazo menor que 60 meses sem justificativa,Autorizações e laudo
+409,1,contratação,locação,regularização,processual,Documentos internos demanda,Ausência das informações de negociação com o locador,Autorizações e laudo
+410,1,contratação,locação,regularização,processual,Documentos internos demanda,Laudo de vistoria ausente (técnico),Autorizações e laudo
+411,1,contratação,locação,regularização,processual,Documentos internos demanda,Falta a Due DILIGENCE para contratações acima de R$ 2 milhões/ano,Autorizações e laudo
+412,1,contratação,locação,regularização,processual,Laudo de avaliação,Falta laudo de avaliação / vencido / sem assinatura,Autorizações e laudo
+413,1,contratação,locação,regularização,processual,Laudo de avaliação,Contratação acima do valor do laudo de avaliação sem justificativa,Autorizações e laudo
+414,1,Atos Formais,locação,Ação Renovatória,Documentação,Documentos do imóvel,Ausência da declaração de cobertura do seguro do imóvel emitida pela seguradora,Definir
+415,1,Atos Formais,locação,Ação Renovatória,Documentação,Documentos do imóvel,Ausência de cópia do alvará de funcionamento,Definir
+416,1,Atos Formais,locação,Ação Renovatória,Documentação,Documentos do imóvel,Ausência do laudo de Avaliação do Imóvel elaborado pela CIHAR,Definir
+417,1,Atos Formais,locação,Ação Renovatória,Documentação,Documentos do imóvel,"Ausência da Matrícula do imóvel no CRI, ou Matrícula desatualizada",Definir
+418,1,Atos Formais,locação,Ação Renovatória,financeiro,Pagamento de Taxas,"Ausência dos comprovantes de todos os pagamentos incidentes sobre o imóvel referentes aos últimos 12 meses (água, energia elétrica, taxas)",Definir
+419,1,Atos Formais,locação,Ação Renovatória,financeiro,Negociação,Ausência de documentos que demonstrem a tentativa da CAIXA de negociar amigavelmente a renovação do contrato com aluguel a preço de mercado,Definir
+420,1,Atos Formais,locação,Ação Renovatória,Processual,Informações do contrato,Ausência de informação da data de início e fim da nova vigência,Definir
+421,1,Atos Formais,locação,Ação Renovatória,financeiro,Informações do contrato,Ausência de informação do valor atual do aluguel,Definir
+422,1,Atos Formais,locação,Ação Renovatória,Processual,Informações do locador,Ausência de informação do nome/CPF/CNPJ do locador,Definir
+423,1,Atos Formais,locação,Ação Renovatória,Processual,Informações do locador,Ausência de informação do endereço completo com CEP do locador,Definir
+424,1,Atos Formais,locação,Ação Renovatória,financeiro,Informações do Representante,Ausência de informação do nome/CPF/CNPJ do Representante,Definir
+425,1,Atos Formais,locação,Ação Renovatória,Processual,Informações do Representante,Ausência de informação do endereço completo com CEP do Representante,Definir
+426,1,Atos Formais,locação,Ação Renovatória,Processual,Dados para contato com o locador,Ausência de informação do e-mail e telefone do locador,Definir
+427,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Dados incompletos ou incorretos na demanda,Dados Iniciais
+428,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Falta justificativas do pedido,Dados Iniciais
+429,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Falta anexos obrigatórios,Dados Iniciais
+430,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Informações divergentes entre sistemas,Dados Iniciais
+431,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Tipo de demanda tratado incorretamente,Dados Iniciais
+432,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Dados conflitantes entre CELOG e CILOG,Dados Iniciais
+433,1,Ato Formal,locação,Prorrogação,Dados Iniciais,Informações iniciais incorretas ou incompletas,Demanda precisa de ajustes no pré-comprometimento,Dados Iniciais
+434,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Matrícula desatualizada ou vencida,Dados do Contrato
+435,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Matrícula incompleta,Dados do Contrato
+436,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Matrícula sem averbação necessária,Dados do Contrato
+437,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Falta averbação da construção,Dados do Contrato
+438,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Matrícula divergente do contrato,Dados do Contrato
+439,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Proprietário diferente da matrícula,Dados do Contrato
+440,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Matrícula / Cartório / Dados do imóvel,Falta habite-se,Dados do Contrato
+441,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Minuta / Cláusulas / Contrato,Minuta com cláusulas indevidas,Dados do Contrato
+442,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Minuta / Cláusulas / Contrato,Minuta incompatível com o negociado,Dados do Contrato
+443,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Minuta / Cláusulas / Contrato,Falta cláusula de alteração de titularidade,Dados do Contrato
+444,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Minuta / Cláusulas / Contrato,Multa rescisória com redação incorreta,Dados do Contrato
+445,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Área / Engenharia,Informações de área divergentes,Dados do Contrato
+446,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Área / Engenharia,Falta laudo de engenharia,Dados do Contrato
+447,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Área / Engenharia,Falta dados sobre acréscimo de área,Dados do Contrato
+448,1,Ato Formal,locação,Prorrogação,Dados do Contrato,Documentos complementares,Falta Plano de Aquisições válido,Dados do Contrato
+449,1,Ato Formal,locação,Prorrogação,Dados do Locador,Documentação do locador,Documentos dos locadores incompletos,Dados do Locador
+450,1,Ato Formal,locação,Prorrogação,Dados do Locador,Documentação do locador,Falta RG/CPF de cônjuge,Dados do Locador
+451,1,Ato Formal,locação,Prorrogação,Dados do Locador,Documentação do locador,Falta certidão de ISS,Dados do Locador
+452,1,Ato Formal,locação,Prorrogação,Dados do Locador,Conta bancária / Pagamentos,Conta em outro banco sem justificativa,Dados do Locador
+453,1,Ato Formal,locação,Prorrogação,Dados do Locador,Conta bancária / Pagamentos,Percentuais dos locadores não informados,Dados do Locador
+454,1,Ato Formal,locação,Prorrogação,Dados do Locador,Aceite / Concordância,Falta anuência do locador,Dados do Locador
+455,1,Ato Formal,locação,Prorrogação,Representante Legal,Representação insuficiente ou irregular,Falta contrato social atualizado,Representante Legal
+456,1,Ato Formal,locação,Prorrogação,Representante Legal,Representação insuficiente ou irregular,Falta procuração válida,Representante Legal
+457,1,Ato Formal,locação,Prorrogação,Representante Legal,Representação insuficiente ou irregular,Representante legal falecido sem substituição,Representante Legal
+458,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Negociação / Laudo / Ação Renovatória,Valor acima do laudo sem justificativa,Dados Adicionais
+459,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Negociação / Laudo / Ação Renovatória,Falta laudo para AR,Dados Adicionais
+460,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Negociação / Laudo / Ação Renovatória,Falta matrícula para AR,Dados Adicionais
+461,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Negociação / Laudo / Ação Renovatória,AR sem esclarecimento ou negociação,Dados Adicionais
+462,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Pendências jurídicas / CADIN,Locador com pendência no CADIN,Dados Adicionais
+463,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Pendências jurídicas / CADIN,Minuta rejeitada pelo jurídico,Dados Adicionais
+464,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Orçamento / Fluxo / Documentos operacionais,Falta tela de reserva orçamentária,Dados Adicionais
+465,1,Ato Formal,locação,Prorrogação,Dados Adicionais,Orçamento / Fluxo / Documentos operacionais,Falta autorização da GELOG,Dados Adicionais

@@ -5,6 +5,8 @@ import { loadCatalog } from '@/data/fetch'
 import { aplicarFiltros, type Filtros } from '@/ui/filters'
 import { fillSelect, renderLista, mapLabel } from '@/ui/render'
 
+type ViewMode = 'summary' | 'list' | 'reports' | 'mapped'
+
 // Refs DOM
 const els = {
   q: document.getElementById('q') as HTMLInputElement | null,
@@ -15,17 +17,166 @@ const els = {
   categoria: document.getElementById('categoria') as HTMLSelectElement | null,
   grid: document.getElementById('grid'),
   metaVersao: document.getElementById('metaVersao'),
+  viewReports: document.getElementById('viewReports') as HTMLButtonElement | null,
   viewSummary: document.getElementById('viewSummary') as HTMLButtonElement | null,
   viewList: document.getElementById('viewList') as HTMLButtonElement | null,
-  btnReset: document.getElementById('btnReset') as HTMLButtonElement | null,
   btnMappedUnused: document.getElementById('btnMappedUnused') as HTMLButtonElement | null,
   resultsInfo: document.getElementById('resultsInfo') as HTMLSpanElement | null,
-  btnDensity: document.getElementById('btnDensity') as HTMLButtonElement | null,
   pagination: document.getElementById('pagination') as HTMLDivElement | null,
   pageSize: document.getElementById('pageSize') as HTMLSelectElement | null,
   btnPrev: document.getElementById('btnPrev') as HTMLButtonElement | null,
   btnNext: document.getElementById('btnNext') as HTMLButtonElement | null,
   pageNumbers: document.getElementById('pageNumbers') as HTMLDivElement | null
+}
+
+type SyntheticFact = {
+  mesRef: string
+  motivoId: number
+  unidadeId: number
+  criticidade: string
+  tempoCorrecaoDias: number
+  slaEstourado: number
+}
+
+type SyntheticReason = {
+  motivoId: number
+  processo: string
+  tipo: string
+  categoria: string
+  descricao: string
+  situacao: string
+}
+
+type SyntheticUnit = {
+  unidadeId: number
+  unidade: string
+  regiao: string
+}
+
+type SyntheticBundle = {
+  facts: SyntheticFact[]
+  reasons: SyntheticReason[]
+  units: SyntheticUnit[]
+}
+
+let syntheticCache: SyntheticBundle | null = null
+let reportRequestId = 0
+
+const htmlEscape = (v: string) =>
+  String(v)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+
+function parseCsv(text: string): string[][] {
+  const rows: string[][] = []
+  let row: string[] = []
+  let field = ''
+  let inQuotes = false
+
+  for (let i = 0; i < text.length; i += 1) {
+    const ch = text[i]
+    const next = text[i + 1]
+
+    if (inQuotes) {
+      if (ch === '"' && next === '"') {
+        field += '"'
+        i += 1
+      } else if (ch === '"') {
+        inQuotes = false
+      } else {
+        field += ch
+      }
+      continue
+    }
+
+    if (ch === '"') {
+      inQuotes = true
+      continue
+    }
+
+    if (ch === ',') {
+      row.push(field)
+      field = ''
+      continue
+    }
+
+    if (ch === '\n') {
+      row.push(field)
+      field = ''
+      if (row.length > 1 || row[0] !== '') rows.push(row)
+      row = []
+      continue
+    }
+
+    if (ch === '\r') continue
+    field += ch
+  }
+
+  if (field.length > 0 || row.length > 0) {
+    row.push(field)
+    if (row.length > 1 || row[0] !== '') rows.push(row)
+  }
+
+  return rows
+}
+
+function csvToObjects(text: string): Array<Record<string, string>> {
+  const rows = parseCsv(text)
+  if (!rows.length) return []
+  const headers = rows[0]
+  return rows.slice(1).map((cols) => {
+    const obj: Record<string, string> = {}
+    headers.forEach((h, i) => {
+      obj[h] = cols[i] ?? ''
+    })
+    return obj
+  })
+}
+
+async function loadSyntheticBundle(): Promise<SyntheticBundle> {
+  if (syntheticCache) return syntheticCache
+  const base = import.meta.env.BASE_URL
+  const [factsRes, reasonsRes, unitsRes] = await Promise.all([
+    fetch(base + 'mock/fato_devolucoes.synthetic.csv', { cache: 'no-store' }),
+    fetch(base + 'mock/dim_motivos.synthetic.csv', { cache: 'no-store' }),
+    fetch(base + 'mock/dim_unidades.synthetic.csv', { cache: 'no-store' })
+  ])
+
+  if (!factsRes.ok || !reasonsRes.ok || !unitsRes.ok) {
+    throw new Error('Arquivos sintéticos não encontrados. Execute: npm run mock:generate')
+  }
+
+  const [factsCsv, reasonsCsv, unitsCsv] = await Promise.all([factsRes.text(), reasonsRes.text(), unitsRes.text()])
+
+  const facts = csvToObjects(factsCsv).map((r) => ({
+    mesRef: r.mesRef,
+    motivoId: Number(r.motivoId || 0),
+    unidadeId: Number(r.unidadeId || 0),
+    criticidade: r.criticidade || 'Baixa',
+    tempoCorrecaoDias: Number(r.tempoCorrecaoDias || 0),
+    slaEstourado: Number(r.slaEstourado || 0)
+  }))
+
+  const reasons = csvToObjects(reasonsCsv).map((r) => ({
+    motivoId: Number(r.motivoId || 0),
+    processo: r.processo || '',
+    tipo: r.tipo || '',
+    categoria: r.categoria || '',
+    descricao: r.descricao || '',
+    situacao: r.situacao || ''
+  }))
+
+  const units = csvToObjects(unitsCsv).map((r) => ({
+    unidadeId: Number(r.unidadeId || 0),
+    unidade: r.unidade || '',
+    regiao: r.regiao || ''
+  }))
+
+  syntheticCache = { facts, reasons, units }
+  return syntheticCache
 }
 
 async function boot() {
@@ -65,7 +216,7 @@ async function boot() {
     tipo: string
     situacao: string
     categoria: string
-    view: 'summary' | 'list'
+    view: ViewMode
     page: number
     size: number | 'all'
   }
@@ -78,12 +229,18 @@ async function boot() {
       tipo: sp.get('tipo') ?? '',
       situacao: sp.get('situacao') ?? '',
       categoria: sp.get('categoria') ?? '',
-      view: (sp.get('view') as 'summary' | 'list' | null) ?? 'summary',
+      view: ((sp.get('view') as ViewMode | null) ?? 'reports') === 'reports'
+        ? 'reports'
+        : ((sp.get('view') as ViewMode | null) ?? 'reports') === 'list'
+          ? 'list'
+          : ((sp.get('view') as ViewMode | null) ?? 'reports') === 'mapped'
+            ? 'mapped'
+            : 'reports',
       page: Math.max(1, parseInt(sp.get('page') || '1', 10)),
       size: sp.get('size') === 'all' ? 'all' : Math.max(1, parseInt(sp.get('size') || '10', 10))
     }
   }
-  const setURLState = (f: Filtros, view: 'summary' | 'list', page: number, size: number | 'all') => {
+  const setURLState = (f: Filtros, view: ViewMode, page: number, size: number | 'all') => {
     const sp = new URLSearchParams()
     if (f.q) sp.set('q', f.q)
     if (f.processo) sp.set('processo', f.processo)
@@ -120,10 +277,10 @@ async function boot() {
     categoria: initial.categoria
   }
 
-  let currentView: 'summary' | 'list' = initial.view
-  let compact = false
+  let currentView: ViewMode = initial.view
   let pageSize: number | 'all' = initial.size || 10
   let page = initial.page || 1
+  els.viewReports?.setAttribute('aria-pressed', currentView === 'reports' ? 'true' : 'false')
   els.viewSummary?.setAttribute('aria-pressed', currentView === 'summary' ? 'true' : 'false')
   els.viewList?.setAttribute('aria-pressed', currentView === 'list' ? 'true' : 'false')
   if (els.pageSize) {
@@ -146,15 +303,10 @@ async function boot() {
     if (!els.grid) return
     // 1º nível: processo. 2º: etapa SILIC. 3º: categoria
     const byProcess = new Map<string, Map<string, Map<string, number>>>()
-    const definirGlobal = new Map<string, number>()
     for (const r of items) {
       const processo = r.processo || 'Definir'
       const step = r.stepSilic || 'Definir'
       const cat = r.categoria || 'Dados adicionais'
-
-      if (step === 'Definir') {
-        definirGlobal.set(cat, (definirGlobal.get(cat) ?? 0) + 1)
-      }
 
       if (!byProcess.has(processo)) byProcess.set(processo, new Map())
       const byStep = byProcess.get(processo)!
@@ -211,16 +363,6 @@ async function boot() {
           </div>
         </section>
       `
-    }
-
-    if (els.btnMappedUnused) {
-      const definirTotal = Array.from(definirGlobal.values()).reduce((acc, n) => acc + n, 0)
-      if (definirTotal > 0) {
-        els.btnMappedUnused.hidden = false
-        els.btnMappedUnused.textContent = `Motivos mapeados - não utilizados (${definirTotal})`
-      } else {
-        els.btnMappedUnused.hidden = true
-      }
     }
 
     ;(els.grid as HTMLElement).innerHTML =
@@ -315,32 +457,351 @@ async function boot() {
   }
 
   const clamp = (n: number, min: number, max: number) => Math.max(min, Math.min(max, n))
+  const renderMappedCatalog = (items: Reason[]) => {
+    if (!els.grid) return
+
+    const grouped = new Map<string, Map<string, Map<string, number>>>()
+    for (const r of items) {
+      const categoria = r.categoria || 'Não informado'
+      const nivel2 = r.descricao || 'Não informado'
+      const nivel3 = r.detalhes || 'Não informado'
+      if (!grouped.has(categoria)) grouped.set(categoria, new Map())
+      const m2 = grouped.get(categoria)!
+      if (!m2.has(nivel2)) m2.set(nivel2, new Map())
+      const m3 = m2.get(nivel2)!
+      m3.set(nivel3, (m3.get(nivel3) ?? 0) + 1)
+    }
+
+    const categorias = Array.from(grouped.entries()).sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+
+    ;(els.grid as HTMLElement).innerHTML = `
+      <section class="report-board" aria-label="Mapa de motivos mapeados">
+        <header class="report-head">
+          <h2>Motivos mapeados</h2>
+          <p>Visualização completa por Categoria → Nível 2 (descrição) → Nível 3 (detalhes).</p>
+        </header>
+        <div class="mapped-grid">
+          ${categorias
+            .map(([categoria, m2]) => {
+              const total = Array.from(m2.values())
+                .flatMap((m3) => Array.from(m3.values()))
+                .reduce((a, n) => a + n, 0)
+
+              const nivel2Html = Array.from(m2.entries())
+                .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+                .map(([nivel2, m3]) => {
+                  const rows = Array.from(m3.entries())
+                    .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+                    .map(([nivel3, qtd]) => `<tr><td>${htmlEscape(nivel3)}</td><td>${qtd.toLocaleString('pt-BR')}</td></tr>`)
+                    .join('')
+
+                  return `
+                    <details class="mapped-details">
+                      <summary>${htmlEscape(nivel2)}</summary>
+                      <table>
+                        <thead><tr><th>Nível 3</th><th>Qtde</th></tr></thead>
+                        <tbody>${rows}</tbody>
+                      </table>
+                    </details>
+                  `
+                })
+                .join('')
+
+              return `
+                <article class="mapped-card">
+                  <h3>${htmlEscape(categoria)} <span class="mapped-count">${total.toLocaleString('pt-BR')}</span></h3>
+                  ${nivel2Html}
+                </article>
+              `
+            })
+            .join('')}
+        </div>
+      </section>
+    `
+  }
+
+  const renderSyntheticReports = async () => {
+    if (!els.grid) return
+
+    const req = ++reportRequestId
+    ;(els.grid as HTMLElement).innerHTML = `
+      <div class="loading" role="status" aria-live="polite">
+        <div class="skel"></div>
+        <div class="skel"></div>
+        <div class="skel"></div>
+      </div>`
+
+    try {
+      const { facts, reasons } = await loadSyntheticBundle()
+      if (req !== reportRequestId || currentView !== 'reports') return
+
+      const reasonById = new Map(reasons.map((r) => [r.motivoId, r]))
+
+      const total = facts.length
+      const tempoMedio = total > 0 ? facts.reduce((acc, x) => acc + x.tempoCorrecaoDias, 0) / total : 0
+      const tempoMaximo = total > 0 ? Math.max(...facts.map((x) => x.tempoCorrecaoDias)) : 0
+
+      const normText = (v = '') =>
+        v
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .toLowerCase()
+          .trim()
+
+      const processoLabel = (v = '') => {
+        const n = normText(v)
+        if (n.includes('contrat')) return 'Contratação'
+        if (n.includes('ato formal')) return 'Atos Formais'
+        return v || 'Não informado'
+      }
+
+      const modalidadeLabel = (v = '') => {
+        const n = normText(v)
+        if (n.includes('locacao')) return 'Locação'
+        if (n.includes('cessao')) return 'Cessão'
+        if (n.includes('comodato')) return 'Comodato'
+        return v || 'Não informado'
+      }
+
+      const servicoContratacao = (v = '') => {
+        const n = normText(v)
+        if (n.includes('nova unidade')) return 'Nova Unidade'
+        if (n.includes('mudanca de endereco')) return 'Mudança de Endereço'
+        if (n.includes('regularizacao')) return 'Regularização'
+        return ''
+      }
+
+      const servicoAtosFormais = (v = '') => {
+        const n = normText(v)
+        if (n.includes('prorrogacao')) return 'Prorrogação'
+        if (n.includes('rescisao')) return 'Rescisão'
+        if (n.includes('titularidade')) return 'Alteração de titularidade'
+        if (n.includes('antecipacao')) return 'Antecipação de parcela'
+        if (n.includes('recebimento') && n.includes('imovel')) return 'Recebimento de imóvel'
+        if (n.includes('acrescimo') && n.includes('area')) return 'Acréscimo de área'
+        if (n.includes('supressao') && n.includes('area')) return 'Supressão de área'
+        if (n.includes('revisao') && n.includes('aluguel')) return 'Revisão de aluguel'
+        if (n.includes('reajuste') && n.includes('aluguel')) return 'Reajuste de aluguel'
+        if (n.includes('apostilamento')) return 'Apostilamento'
+        if (n.includes('acao renovatoria')) return 'Ação renovatória'
+        return ''
+      }
+
+      const inc = (m: Map<string, number>, key: string, v = 1) => m.set(key, (m.get(key) ?? 0) + v)
+      const byMotivo = new Map<string, number>()
+      const byCategoria = new Map<string, number>()
+      const byCategoriaNivel2 = new Map<string, number>()
+      const byModalidade = new Map<string, number>()
+      const byServicoContratacao = new Map<string, number>()
+      const byServicoAtosFormais = new Map<string, number>()
+      const byMes = new Map<string, number>()
+      const byMesProcesso = new Map<string, { contratacao: number; atosFormais: number }>()
+
+      const servicosContratacaoOrdem = ['Nova Unidade', 'Mudança de Endereço', 'Regularização']
+      const servicosAtosOrdem = [
+        'Prorrogação',
+        'Rescisão',
+        'Alteração de titularidade',
+        'Antecipação de parcela',
+        'Recebimento de imóvel',
+        'Acréscimo de área',
+        'Supressão de área',
+        'Revisão de aluguel',
+        'Reajuste de aluguel',
+        'Apostilamento',
+        'Ação renovatória'
+      ]
+
+      for (const f of facts) {
+        const r = reasonById.get(f.motivoId)
+        const proc = processoLabel(r?.processo || '')
+        const modalidade = modalidadeLabel(r?.tipo || '')
+        const sit = r?.situacao || ''
+        const categoria = r?.categoria || 'Não informado'
+        const nivel2 = r?.descricao || 'Não informado'
+        inc(byMotivo, r?.descricao || 'Não informado')
+        inc(byCategoria, categoria)
+        inc(byCategoriaNivel2, `${categoria}|||${nivel2}`)
+        inc(byModalidade, modalidade)
+        if (proc === 'Contratação') {
+          const serv = servicoContratacao(sit)
+          if (serv) inc(byServicoContratacao, serv)
+        } else if (proc === 'Atos Formais') {
+          const serv = servicoAtosFormais(sit)
+          if (serv) inc(byServicoAtosFormais, serv)
+        }
+        inc(byMes, f.mesRef || 'Não informado')
+        const m = f.mesRef || 'Não informado'
+        if (!byMesProcesso.has(m)) byMesProcesso.set(m, { contratacao: 0, atosFormais: 0 })
+        const bucket = byMesProcesso.get(m)!
+        if (proc === 'Contratação') bucket.contratacao += 1
+        else if (proc === 'Atos Formais') bucket.atosFormais += 1
+      }
+
+      const top = (m: Map<string, number>, n: number) =>
+        Array.from(m.entries())
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, n)
+
+      const topMotivos = top(byMotivo, 8)
+      const topCategorias = top(byCategoria, 6)
+      const topCategoriaNivel2 = top(byCategoriaNivel2, 10)
+      const topModalidades = top(byModalidade, 3)
+      const meses = Array.from(byMes.entries()).sort((a, b) => a[0].localeCompare(b[0]))
+      const mesesAcumulado = (() => {
+        let running = 0
+        let runningContratacao = 0
+        let runningAtos = 0
+        return meses.map(([mes, qtd]) => {
+          running += qtd
+          const p = byMesProcesso.get(mes) || { contratacao: 0, atosFormais: 0 }
+          runningContratacao += p.contratacao
+          runningAtos += p.atosFormais
+          return {
+            mes,
+            total: running,
+            contratacao: runningContratacao,
+            atosFormais: runningAtos
+          }
+        })
+      })()
+      const servicosContratacao = servicosContratacaoOrdem
+        .map((s) => [s, byServicoContratacao.get(s) ?? 0] as [string, number])
+      const servicosAtos = servicosAtosOrdem
+        .map((s) => [s, byServicoAtosFormais.get(s) ?? 0] as [string, number])
+
+      const tableRows = (entries: Array<[string, number]>) =>
+        entries
+          .map(([k, v]) => `<tr><td>${htmlEscape(k)}</td><td>${v.toLocaleString('pt-BR')}</td></tr>`)
+          .join('')
+
+      const tableRowsCategoriaNivel2 = (entries: Array<[string, number]>) =>
+        entries
+          .map(([k, v]) => {
+            const [cat, nivel2] = k.split('|||')
+            return `<tr><td>${htmlEscape(cat || 'Não informado')}</td><td>${htmlEscape(nivel2 || 'Não informado')}</td><td>${v.toLocaleString('pt-BR')}</td></tr>`
+          })
+          .join('')
+
+      const chartRows = (entries: Array<{ mes: string; total: number; contratacao: number; atosFormais: number }>) => {
+        const max = Math.max(...entries.map((x) => x.total), 1)
+        const labelMes = (m: string) => {
+          const [y, mm] = m.split('-')
+          return `${mm}/${y}`
+        }
+
+        return entries
+          .map((entry) => {
+            const width = Math.max(2, Math.round((entry.total / max) * 100))
+            const percContratacao = entry.total > 0 ? (entry.contratacao / entry.total) * 100 : 0
+            const percAtos = entry.total > 0 ? (entry.atosFormais / entry.total) * 100 : 0
+            return `<div class="chart-row">
+              <span class="chart-label">${htmlEscape(labelMes(entry.mes))}</span>
+              <div class="chart-track" aria-hidden="true">
+                <div class="chart-fill" style="width:${width}%"></div>
+              </div>
+              <span class="chart-value">${entry.total.toLocaleString('pt-BR')}</span>
+              <span class="chart-detail">Contratação: ${percContratacao.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}% · Atos Formais: ${percAtos.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%</span>
+            </div>`
+          })
+          .join('')
+      }
+
+      ;(els.grid as HTMLElement).innerHTML = `
+        <section class="report-board" aria-label="Relatórios gerenciais sintéticos">
+          <header class="report-head">
+            <h2>Relatórios gerenciais (dados sintéticos)</h2>
+            <p>Base emulada a partir do catálogo de motivos ativos. As modalidades (Locação, Cessão e Comodato) reúnem serviços de Contratação e de Atos Formais.</p>
+          </header>
+
+          <div class="report-kpis">
+            <article class="report-kpi"><h3>Total devoluções</h3><strong>${total.toLocaleString('pt-BR')}</strong></article>
+            <article class="report-kpi">
+              <h3>
+                Tempo médio de devolução
+                <span class="hint" title="Média simples dos dias de devolução/correção. Fórmula sugerida ao desenvolvedor: SUM(tempoCorrecaoDias) / COUNT(casos).">
+                  ⓘ
+                </span>
+              </h3>
+              <strong>${tempoMedio.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} dias</strong>
+            </article>
+            <article class="report-kpi">
+              <h3>
+                Tempo máximo de devolução
+                <span class="hint" title="Maior tempo observado entre os casos. Fórmula sugerida ao desenvolvedor: MAX(tempoCorrecaoDias).">
+                  ⓘ
+                </span>
+              </h3>
+              <strong>${tempoMaximo.toLocaleString('pt-BR')} dias</strong>
+            </article>
+            <article class="report-kpi"><h3>Motivos ativos</h3><strong>${reasons.length.toLocaleString('pt-BR')}</strong></article>
+          </div>
+
+          <div class="report-grid">
+            <article class="report-card">
+              <h3>Pareto de motivos (Top 8)</h3>
+              <table><thead><tr><th>Motivo</th><th>Qtde</th></tr></thead><tbody>${tableRows(topMotivos)}</tbody></table>
+            </article>
+            <article class="report-card">
+              <h3>Devoluções por categoria</h3>
+              <table><thead><tr><th>Categoria</th><th>Qtde</th></tr></thead><tbody>${tableRows(topCategorias)}</tbody></table>
+            </article>
+            <article class="report-card">
+              <h3>Devoluções por modalidade</h3>
+              <table><thead><tr><th>Modalidade</th><th>Qtde</th></tr></thead><tbody>${tableRows(topModalidades)}</tbody></table>
+            </article>
+            <article class="report-card">
+              <h3>Devoluções por categoria (nível 2)</h3>
+              <table><thead><tr><th>Categoria</th><th>Nível 2</th><th>Qtde</th></tr></thead><tbody>${tableRowsCategoriaNivel2(topCategoriaNivel2)}</tbody></table>
+            </article>
+            <article class="report-card">
+              <h3>Devoluções - Contratação</h3>
+              <table><thead><tr><th>Serviço</th><th>Qtde</th></tr></thead><tbody>${tableRows(servicosContratacao)}</tbody></table>
+            </article>
+            <article class="report-card">
+              <h3>Devoluções - Atos Formais</h3>
+              <table><thead><tr><th>Serviço</th><th>Qtde</th></tr></thead><tbody>${tableRows(servicosAtos)}</tbody></table>
+            </article>
+            <article class="report-card report-card-wide">
+              <h3>Tendência mensal (acumulado)</h3>
+              <div class="report-chart" role="img" aria-label="Gráfico de barras do acumulado mensal de devoluções">
+                ${chartRows(mesesAcumulado)}
+              </div>
+            </article>
+          </div>
+        </section>
+      `
+    } catch (err) {
+      if (req !== reportRequestId || currentView !== 'reports') return
+      ;(els.grid as HTMLElement).innerHTML = `
+        <div class="error">
+          Não foi possível carregar os relatórios sintéticos.<br/>
+          Execute <strong>npm run mock:generate</strong> e atualize a página.
+        </div>`
+      console.error(err)
+    }
+  }
+
   const applyAndRender = () => {
     const out = aplicarFiltros(lista, filtros)
     // calcular paginação
     const total = out.length
-  const isAll = currentView === 'list' && pageSize === 'all'
-  const totalPages = currentView === 'list' ? (isAll ? 1 : Math.max(1, Math.ceil(total / (pageSize as number)))) : 1
-  page = currentView === 'list' ? clamp(page, 1, totalPages) : 1
-  updateResultsInfo(total, isAll ? undefined : totalPages)
+    const isAll = currentView === 'list' && pageSize === 'all'
+    const totalPages = currentView === 'list' ? (isAll ? 1 : Math.max(1, Math.ceil(total / (pageSize as number)))) : 1
+    page = currentView === 'list' ? clamp(page, 1, totalPages) : 1
+    if (currentView === 'reports') {
+      if (els.resultsInfo) els.resultsInfo.textContent = 'Visualizando relatórios com dados sintéticos'
+    } else if (currentView === 'mapped') {
+      if (els.resultsInfo) els.resultsInfo.textContent = 'Visualizando mapa completo de motivos mapeados em uso'
+    } else {
+      updateResultsInfo(total, isAll ? undefined : totalPages)
+    }
     // Empty state (lista)
     if (currentView === 'list' && total === 0 && els.grid) {
       ;(els.grid as HTMLElement).innerHTML = `
         <div class="empty">
-          🗂️ Nenhum resultado encontrado.<br/>
-          <button id="clearFilters" class="btn btn-secondary" style="margin-top:10px">Limpar filtros</button>
+          🗂️ Nenhum resultado encontrado.
         </div>`
-      document.getElementById('clearFilters')?.addEventListener('click', () => {
-        filtros.q = filtros.processo = filtros.stepSilic = filtros.tipo = filtros.situacao = filtros.categoria = ''
-        if (els.q) els.q.value = ''
-        if (els.processo) els.processo.value = ''
-        if (els.stepSilic) els.stepSilic.value = ''
-        if (els.tipo) els.tipo.value = ''
-        if (els.situacao) els.situacao.value = ''
-        if (els.categoria) els.categoria.value = ''
-        page = 1
-        applyAndRender()
-      })
       els.pagination?.setAttribute('hidden', 'true')
       renderChips()
       setURLState(filtros, currentView, page, pageSize)
@@ -348,11 +809,16 @@ async function boot() {
     }
     setURLState(filtros, currentView, page, pageSize)
     if (!els.grid) return
-    if (currentView === 'summary') {
+    if (currentView === 'reports') {
+      els.pagination?.setAttribute('hidden', 'true')
+      void renderSyntheticReports()
+    } else if (currentView === 'mapped') {
+      els.pagination?.setAttribute('hidden', 'true')
+      renderMappedCatalog(lista)
+    } else if (currentView === 'summary') {
       els.pagination?.setAttribute('hidden', 'true')
       renderSummary(out)
     } else {
-      if (els.btnMappedUnused) els.btnMappedUnused.hidden = true
       const isAll = pageSize === 'all'
       const start = isAll ? 0 : (page - 1) * (pageSize as number)
       const end = isAll ? out.length : start + (pageSize as number)
@@ -443,44 +909,50 @@ async function boot() {
     applyAndRender()
   })
 
+  els.viewReports?.addEventListener('click', () => {
+    currentView = 'reports'
+    els.viewReports?.setAttribute('aria-pressed', 'true')
+    els.viewSummary?.setAttribute('aria-pressed', 'false')
+    els.viewList?.setAttribute('aria-pressed', 'false')
+    els.btnMappedUnused?.setAttribute('aria-pressed', 'false')
+    page = 1
+    applyAndRender()
+  })
+
   // View toggle
   els.viewSummary?.addEventListener('click', () => {
     currentView = 'summary'
+    els.viewReports?.setAttribute('aria-pressed', 'false')
     els.viewSummary?.setAttribute('aria-pressed', 'true')
     els.viewList?.setAttribute('aria-pressed', 'false')
+    els.btnMappedUnused?.setAttribute('aria-pressed', 'false')
     page = 1
     applyAndRender()
   })
   els.viewList?.addEventListener('click', () => {
     currentView = 'list'
+    els.viewReports?.setAttribute('aria-pressed', 'false')
     els.viewSummary?.setAttribute('aria-pressed', 'false')
     els.viewList?.setAttribute('aria-pressed', 'true')
+    els.btnMappedUnused?.setAttribute('aria-pressed', 'false')
     page = 1
     applyAndRender()
   })
 
-  // Reset filtros
-  els.btnReset?.addEventListener('click', () => {
-    if (els.q) els.q.value = ''
-    if (els.processo) els.processo.value = ''
-    if (els.stepSilic) els.stepSilic.value = ''
-    if (els.tipo) els.tipo.value = ''
-    if (els.situacao) els.situacao.value = ''
-    if (els.categoria) els.categoria.value = ''
-    filtros.q = filtros.processo = filtros.stepSilic = filtros.tipo = filtros.situacao = filtros.categoria = ''
-    currentView = 'summary'
-    page = 1
-    applyAndRender()
-  })
+  if (els.btnMappedUnused) {
+    els.btnMappedUnused.hidden = false
+    els.btnMappedUnused.textContent = 'Motivos mapeados em uso'
+    els.btnMappedUnused.setAttribute('aria-pressed', 'false')
+  }
 
   els.btnMappedUnused?.addEventListener('click', () => {
-    const url = new URL(location.href)
-    const sp = new URLSearchParams()
-    sp.set('view', 'list')
-    sp.set('stepSilic', 'Definir')
-    sp.set('size', 'all')
-    url.search = sp.toString()
-    window.open(url.toString(), '_blank', 'noopener,noreferrer')
+    currentView = 'mapped'
+    els.viewReports?.setAttribute('aria-pressed', 'false')
+    els.viewSummary?.setAttribute('aria-pressed', 'false')
+    els.viewList?.setAttribute('aria-pressed', 'false')
+    els.btnMappedUnused?.setAttribute('aria-pressed', 'true')
+    page = 1
+    applyAndRender()
   })
 
   // Paginação: tamanho de página e navegação
@@ -501,13 +973,6 @@ async function boot() {
     page += 1
     applyAndRender()
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  })
-
-  // Alterna densidade compacta da lista
-  els.btnDensity?.addEventListener('click', () => {
-    compact = !compact
-    document.documentElement.toggleAttribute('data-compact', compact)
-    els.btnDensity && (els.btnDensity.textContent = compact ? 'Modo confortável' : 'Modo compacto')
   })
 
   // Voltar/avançar do navegador: re-aplica estado
@@ -532,8 +997,10 @@ async function boot() {
       const opt = Array.from(els.pageSize.options).find(o => (o.value === 'all' && pageSize === 'all') || parseInt(o.value, 10) === pageSize)
       if (opt) els.pageSize.value = opt.value
     }
+    els.viewReports?.setAttribute('aria-pressed', currentView === 'reports' ? 'true' : 'false')
     els.viewSummary?.setAttribute('aria-pressed', currentView === 'summary' ? 'true' : 'false')
     els.viewList?.setAttribute('aria-pressed', currentView === 'list' ? 'true' : 'false')
+    els.btnMappedUnused?.setAttribute('aria-pressed', currentView === 'mapped' ? 'true' : 'false')
     applyAndRender()
   })
 

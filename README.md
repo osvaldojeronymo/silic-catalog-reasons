@@ -73,7 +73,7 @@ Workflow em `.github/workflows/ci.yml` com: install, typecheck, lint, unit, buil
 
 ## Dados
 
-O app consome `public/reasons.unified.json`.
+O app consome `public/reasons.mapeados-uso.json`.
 
 Para (re)gerar os dados unificados e arquivos corrigidos:
 
@@ -84,5 +84,27 @@ npm run merge:reasons
 Arquivos gerados:
 
 - `public/reasons.unified.json`
+- `public/reasons.mapeados-uso.json`
+- `public/reasons.mapeados-reserva.json`
 - `public/reasons.normalized.fixed.json`
 - `public/motivos_tabela_completa.fixed.json`
+
+## Dados sintéticos para relatórios gerenciais
+
+Para emular dados (sem banco) e montar painéis no Power BI/Excel:
+
+```bash
+npm run mock:generate
+```
+
+Arquivos gerados em `public/mock`:
+
+- `dim_motivos.synthetic.csv`
+- `dim_unidades.synthetic.csv`
+- `fato_devolucoes.synthetic.csv`
+- `synthetic.summary.json`
+
+Observações:
+
+- Os dados são sintéticos e determinísticos (seed fixa), úteis para prototipação e validação de indicadores.
+- Modelo sugerido: `fato_devolucoes` ligada a `dim_motivos` por `motivoId` e a `dim_unidades` por `unidadeId`.

@@ -615,10 +615,12 @@ async function boot() {
       const inc = (m: Map<string, number>, key: string, v = 1) => m.set(key, (m.get(key) ?? 0) + v)
       const byMotivo = new Map<string, number>()
       const byCategoria = new Map<string, number>()
-      const byCategoriaNivel2 = new Map<string, number>()
       const byModalidade = new Map<string, number>()
+      const byModalidadeNivel2 = new Map<string, number>()
       const byServicoContratacao = new Map<string, number>()
       const byServicoAtosFormais = new Map<string, number>()
+      const byServicoContratacaoNivel2 = new Map<string, number>()
+      const byServicoAtosNivel2 = new Map<string, number>()
       const byMes = new Map<string, number>()
       const byMesProcesso = new Map<string, { contratacao: number; atosFormais: number }>()
 
@@ -646,14 +648,20 @@ async function boot() {
         const nivel2 = r?.descricao || 'Não informado'
         inc(byMotivo, r?.descricao || 'Não informado')
         inc(byCategoria, categoria)
-        inc(byCategoriaNivel2, `${categoria}|||${nivel2}`)
         inc(byModalidade, modalidade)
+        inc(byModalidadeNivel2, `${modalidade}|||${nivel2}`)
         if (proc === 'Contratação') {
           const serv = servicoContratacao(sit)
-          if (serv) inc(byServicoContratacao, serv)
+          if (serv) {
+            inc(byServicoContratacao, serv)
+            inc(byServicoContratacaoNivel2, `${serv}|||${nivel2}`)
+          }
         } else if (proc === 'Atos Formais') {
           const serv = servicoAtosFormais(sit)
-          if (serv) inc(byServicoAtosFormais, serv)
+          if (serv) {
+            inc(byServicoAtosFormais, serv)
+            inc(byServicoAtosNivel2, `${serv}|||${nivel2}`)
+          }
         }
         inc(byMes, f.mesRef || 'Não informado')
         const m = f.mesRef || 'Não informado'
@@ -670,8 +678,8 @@ async function boot() {
 
       const topMotivos = top(byMotivo, 8)
       const topCategorias = top(byCategoria, 6)
-      const topCategoriaNivel2 = top(byCategoriaNivel2, 10)
       const topModalidades = top(byModalidade, 3)
+      const modalidadeNivel2Completo = Array.from(byModalidadeNivel2.entries())
       const meses = Array.from(byMes.entries()).sort((a, b) => a[0].localeCompare(b[0]))
       const mesesAcumulado = (() => {
         let running = 0
@@ -690,23 +698,105 @@ async function boot() {
           }
         })
       })()
-      const servicosContratacao = servicosContratacaoOrdem
-        .map((s) => [s, byServicoContratacao.get(s) ?? 0] as [string, number])
-      const servicosAtos = servicosAtosOrdem
-        .map((s) => [s, byServicoAtosFormais.get(s) ?? 0] as [string, number])
+      const servicosContratacaoNivel2 = Array.from(byServicoContratacaoNivel2.entries())
+        .sort((a, b) => {
+          const [servA, nivel2A] = a[0].split('|||')
+          const [servB, nivel2B] = b[0].split('|||')
+          const idxA = servicosContratacaoOrdem.indexOf(servA)
+          const idxB = servicosContratacaoOrdem.indexOf(servB)
+          if (idxA !== idxB) return idxA - idxB
+          if (b[1] !== a[1]) return b[1] - a[1]
+          return (nivel2A || '').localeCompare(nivel2B || '', 'pt-BR')
+        })
+
+      const servicosAtosNivel2 = Array.from(byServicoAtosNivel2.entries())
+        .sort((a, b) => {
+          const [servA, nivel2A] = a[0].split('|||')
+          const [servB, nivel2B] = b[0].split('|||')
+          const idxA = servicosAtosOrdem.indexOf(servA)
+          const idxB = servicosAtosOrdem.indexOf(servB)
+          if (idxA !== idxB) return idxA - idxB
+          if (b[1] !== a[1]) return b[1] - a[1]
+          return (nivel2A || '').localeCompare(nivel2B || '', 'pt-BR')
+        })
 
       const tableRows = (entries: Array<[string, number]>) =>
         entries
           .map(([k, v]) => `<tr><td>${htmlEscape(k)}</td><td>${v.toLocaleString('pt-BR')}</td></tr>`)
           .join('')
 
-      const tableRowsCategoriaNivel2 = (entries: Array<[string, number]>) =>
-        entries
-          .map(([k, v]) => {
-            const [cat, nivel2] = k.split('|||')
-            return `<tr><td>${htmlEscape(cat || 'Não informado')}</td><td>${htmlEscape(nivel2 || 'Não informado')}</td><td>${v.toLocaleString('pt-BR')}</td></tr>`
+      const tableRowsModalidadeNivel2 = (entries: Array<[string, number]>) =>
+        (() => {
+          const grouped = new Map<string, Array<[string, number]>>()
+          for (const [k, v] of entries) {
+            const [modalidade, nivel2] = k.split('|||')
+            const key = modalidade || 'Não informado'
+            if (!grouped.has(key)) grouped.set(key, [])
+            grouped.get(key)!.push([nivel2 || 'Não informado', v])
+          }
+
+          const order = ['Locação', 'Cessão', 'Comodato']
+          const groupedRows = Array.from(grouped.entries()).sort((a, b) => {
+            const ia = order.indexOf(a[0])
+            const ib = order.indexOf(b[0])
+            if (ia !== -1 && ib !== -1) return ia - ib
+            if (ia !== -1) return -1
+            if (ib !== -1) return 1
+            return a[0].localeCompare(b[0], 'pt-BR')
           })
-          .join('')
+
+          return groupedRows
+            .map(([modalidade, itens]) => {
+              const total = itens.reduce((acc, [, qtd]) => acc + qtd, 0)
+              const detalhamento = itens
+                .sort((a, b) => b[1] - a[1])
+                .map(
+                  ([nivel2, qtd]) =>
+                    `<li><span class="service-label">${htmlEscape(nivel2)}</span><strong class="service-qty">${qtd.toLocaleString('pt-BR')}</strong></li>`
+                )
+                .join('')
+
+              return `<tr>
+                <td>${htmlEscape(modalidade)}</td>
+                <td>
+                  <ul class="service-breakdown">${detalhamento}</ul>
+                  <div class="service-total">Total: ${total.toLocaleString('pt-BR')}</div>
+                </td>
+              </tr>`
+            })
+            .join('')
+        })()
+
+      const tableRowsServicoNivel2 = (entries: Array<[string, number]>) =>
+        (() => {
+          const grouped = new Map<string, Array<[string, number]>>()
+          for (const [k, v] of entries) {
+            const [servico, nivel2] = k.split('|||')
+            const key = servico || 'Não informado'
+            if (!grouped.has(key)) grouped.set(key, [])
+            grouped.get(key)!.push([nivel2 || 'Não informado', v])
+          }
+
+          return Array.from(grouped.entries())
+            .map(([servico, itens]) => {
+              const total = itens.reduce((acc, [, qtd]) => acc + qtd, 0)
+              const detalhamento = itens
+                .map(
+                  ([nivel2, qtd]) =>
+                    `<li><span class="service-label">${htmlEscape(nivel2)}</span><strong class="service-qty">${qtd.toLocaleString('pt-BR')}</strong></li>`
+                )
+                .join('')
+
+              return `<tr>
+                <td>${htmlEscape(servico)}</td>
+                <td>
+                  <ul class="service-breakdown">${detalhamento}</ul>
+                  <div class="service-total">Total: ${total.toLocaleString('pt-BR')}</div>
+                </td>
+              </tr>`
+            })
+            .join('')
+        })()
 
       const chartRows = (entries: Array<{ mes: string; total: number; contratacao: number; atosFormais: number }>) => {
         const max = Math.max(...entries.map((x) => x.total), 1)
@@ -772,20 +862,20 @@ async function boot() {
               <table><thead><tr><th>Categoria</th><th>Qtde</th></tr></thead><tbody>${tableRows(topCategorias)}</tbody></table>
             </article>
             <article class="report-card">
+              <h3>Devoluções - Contratação</h3>
+              <table class="service-table"><thead><tr><th>Serviço</th><th>Nível 2 (detalhamento)</th></tr></thead><tbody>${tableRowsServicoNivel2(servicosContratacaoNivel2)}</tbody></table>
+            </article>
+            <article class="report-card">
+              <h3>Devoluções - Atos Formais</h3>
+              <table class="service-table"><thead><tr><th>Serviço</th><th>Nível 2 (detalhamento)</th></tr></thead><tbody>${tableRowsServicoNivel2(servicosAtosNivel2)}</tbody></table>
+            </article>
+            <article class="report-card">
               <h3>Devoluções por modalidade</h3>
               <table><thead><tr><th>Modalidade</th><th>Qtde</th></tr></thead><tbody>${tableRows(topModalidades)}</tbody></table>
             </article>
             <article class="report-card">
-              <h3>Devoluções por categoria (nível 2)</h3>
-              <table><thead><tr><th>Categoria</th><th>Nível 2</th><th>Qtde</th></tr></thead><tbody>${tableRowsCategoriaNivel2(topCategoriaNivel2)}</tbody></table>
-            </article>
-            <article class="report-card">
-              <h3>Devoluções - Contratação</h3>
-              <table><thead><tr><th>Serviço</th><th>Qtde</th></tr></thead><tbody>${tableRows(servicosContratacao)}</tbody></table>
-            </article>
-            <article class="report-card">
-              <h3>Devoluções - Atos Formais</h3>
-              <table><thead><tr><th>Serviço</th><th>Qtde</th></tr></thead><tbody>${tableRows(servicosAtos)}</tbody></table>
+              <h3>Devoluções por modalidade (nível 2)</h3>
+              <table class="service-table"><thead><tr><th>Modalidade</th><th>Nível 2 (detalhamento)</th></tr></thead><tbody>${tableRowsModalidadeNivel2(modalidadeNivel2Completo)}</tbody></table>
             </article>
             <article class="report-card report-card-wide">
               <h3>Tendência mensal (acumulado)</h3>

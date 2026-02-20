@@ -763,6 +763,46 @@ summary:focus-visible {
   text-align: right;
 }
 
+.service-breakdown {
+  margin: 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 2px;
+}
+
+.service-breakdown li {
+  line-height: 1.35;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.service-breakdown strong {
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+.service-label {
+  flex: 1;
+}
+
+.service-qty {
+  min-width: 52px;
+  text-align: right;
+}
+
+.service-table td {
+  vertical-align: top;
+}
+
+.service-total {
+  margin-top: 6px;
+  text-align: right;
+  font-weight: 700;
+  color: #111827;
+}
+
 .report-card-wide {
   grid-column: span 2;
 }

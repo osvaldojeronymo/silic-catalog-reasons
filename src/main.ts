@@ -825,8 +825,15 @@ async function boot() {
       ;(els.grid as HTMLElement).innerHTML = `
         <section class="report-board" aria-label="Relatórios gerenciais sintéticos">
           <header class="report-head">
-            <h2>Relatórios gerenciais (dados sintéticos)</h2>
-            <p>Base emulada a partir do catálogo de motivos ativos. As modalidades (Locação, Cessão e Comodato) reúnem serviços de Contratação e de Atos Formais.</p>
+            <div>
+              <h2>Relatórios gerenciais (dados sintéticos)</h2>
+              <p>Base emulada a partir do catálogo de motivos ativos. As modalidades (Locação, Cessão e Comodato) reúnem serviços de Contratação e de Atos Formais.</p>
+            </div>
+            <div class="report-actions">
+              <button id="exportPdfBtn" type="button" class="btn btn-secondary" aria-label="Exportar relatórios em PDF">
+                Exportar PDF
+              </button>
+            </div>
           </header>
 
           <div class="report-kpis">
@@ -886,6 +893,11 @@ async function boot() {
           </div>
         </section>
       `
+
+      const exportPdfBtn = document.getElementById('exportPdfBtn') as HTMLButtonElement | null
+      exportPdfBtn?.addEventListener('click', () => {
+        window.print()
+      })
     } catch (err) {
       if (req !== reportRequestId || currentView !== 'reports') return
       ;(els.grid as HTMLElement).innerHTML = `

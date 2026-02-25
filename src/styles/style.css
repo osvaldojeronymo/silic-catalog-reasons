@@ -683,6 +683,20 @@ summary:focus-visible {
   font-size: 1.2rem;
 }
 
+.report-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .report-head p {
   margin: 4px 0 0;
   color: var(--muted);
@@ -946,6 +960,15 @@ summary:focus-visible {
 }
 
 @media (max-width: 900px) {
+  .report-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-actions {
+    justify-content: flex-start;
+  }
+
   .report-kpis {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -965,5 +988,49 @@ summary:focus-visible {
 
   .report-card-wide {
     grid-column: span 1;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  .skip-link,
+  .header,
+  .viewbar,
+  .app-footer,
+  .report-actions,
+  .hint,
+  .pagination {
+    display: none !important;
+  }
+
+  .main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid,
+  .report-board {
+    display: block;
+  }
+
+  .report-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-card,
+  .report-kpi,
+  .mapped-card,
+  .mapped-details {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }

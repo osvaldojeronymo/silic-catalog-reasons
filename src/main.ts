@@ -890,6 +890,97 @@ async function boot() {
         },
       );
 
+      const servicosAtosNivel2 = Array.from(byServicoAtosNivel2.entries()).sort((a, b) => {
+        const [servA, nivel2A] = a[0].split('|||');
+        const [servB, nivel2B] = b[0].split('|||');
+        const idxA = servicosAtosOrdem.indexOf(servA);
+        const idxB = servicosAtosOrdem.indexOf(servB);
+        if (idxA !== idxB) return idxA - idxB;
+        if (b[1] !== a[1]) return b[1] - a[1];
+        return (nivel2A || '').localeCompare(nivel2B || '', 'pt-BR');
+      });
+
+      const tableRows = (entries: Array<[string, number]>) =>
+        entries
+          .map(
+            ([key, value]) =>
+              `<tr><td>${htmlEscape(key)}</td><td>${value.toLocaleString('pt-BR')}</td></tr>`,
+          )
+          .join('');
+
+      const tableRowsModalidadeNivel2 = (entries: Array<[string, number]>) =>
+        (() => {
+          const grouped = new Map<string, Array<[string, number]>>();
+          for (const [key, value] of entries) {
+            const [modalidade, nivel2] = key.split('|||');
+            const groupKey = modalidade || 'Não informado';
+            if (!grouped.has(groupKey)) grouped.set(groupKey, []);
+            grouped.get(groupKey)!.push([nivel2 || 'Não informado', value]);
+          }
+
+          const order = ['Locação', 'Cessão', 'Comodato'];
+          const groupedRows = Array.from(grouped.entries()).sort((a, b) => {
+            const idxA = order.indexOf(a[0]);
+            const idxB = order.indexOf(b[0]);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return a[0].localeCompare(b[0], 'pt-BR');
+          });
+
+          return groupedRows
+            .map(([modalidade, items]) => {
+              const totalItems = items.reduce((acc, [, qty]) => acc + qty, 0);
+              const detailRows = items
+                .sort((a, b) => b[1] - a[1])
+                .map(
+                  ([nivel2, qty]) =>
+                    `<li><span class="service-label">${htmlEscape(nivel2)}</span><strong class="service-qty">${qty.toLocaleString('pt-BR')}</strong></li>`,
+                )
+                .join('');
+
+              return `<tr>
+                <td>${htmlEscape(modalidade)}</td>
+                <td>
+                  <ul class="service-breakdown">${detailRows}</ul>
+                  <div class="service-total">Total: ${totalItems.toLocaleString('pt-BR')}</div>
+                </td>
+              </tr>`;
+            })
+            .join('');
+        })();
+
+      const tableRowsServicoNivel2 = (entries: Array<[string, number]>) =>
+        (() => {
+          const grouped = new Map<string, Array<[string, number]>>();
+          for (const [key, value] of entries) {
+            const [servico, nivel2] = key.split('|||');
+            const groupKey = servico || 'Não informado';
+            if (!grouped.has(groupKey)) grouped.set(groupKey, []);
+            grouped.get(groupKey)!.push([nivel2 || 'Não informado', value]);
+          }
+
+          return Array.from(grouped.entries())
+            .map(([servico, items]) => {
+              const totalItems = items.reduce((acc, [, qty]) => acc + qty, 0);
+              const detailRows = items
+                .map(
+                  ([nivel2, qty]) =>
+                    `<li><span class="service-label">${htmlEscape(nivel2)}</span><strong class="service-qty">${qty.toLocaleString('pt-BR')}</strong></li>`,
+                )
+                .join('');
+
+              return `<tr>
+                <td>${htmlEscape(servico)}</td>
+                <td>
+                  <ul class="service-breakdown">${detailRows}</ul>
+                  <div class="service-total">Total: ${totalItems.toLocaleString('pt-BR')}</div>
+                </td>
+              </tr>`;
+            })
+            .join('');
+        })();
+
       const chartRows = (
         entries: Array<{ mes: string; total: number; contratacao: number; atosFormais: number }>,
       ) => {

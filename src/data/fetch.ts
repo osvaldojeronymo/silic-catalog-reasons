@@ -36,10 +36,14 @@ const capitalizeFirst = (value = '') => {
 
 export async function loadCatalog(): Promise<Catalogo> {
   const base = import.meta.env.BASE_URL
-  const primaryUrl = base + 'reasons.mapeados-uso.json'
+  const primaryUrl = base + 'reasons.unified.consolidado.json'
+  const fallbackUrl = base + 'reasons.mapeados-uso.json'
   const legacyUrl = base + 'reasons.unified.json'
 
   let res = await fetch(primaryUrl, { cache: 'no-store' })
+  if (!res.ok) {
+    res = await fetch(fallbackUrl, { cache: 'no-store' })
+  }
   if (!res.ok) {
     res = await fetch(legacyUrl, { cache: 'no-store' })
   }

@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SILIC 2.0 — Catálogo de Motivos de Devolução - Imóveis de uso</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
@@ -13,7 +16,13 @@
         <div class="nav-container">
           <div class="nav-left">
             <div class="nav-logo">
-              <img src="assets/images/logo-caixa.svg" alt="Logomarca Caixa Econômica Federal" class="logo-image" width="40" height="40" />
+              <img
+                src="assets/images/logo-caixa.svg"
+                alt="Logomarca Caixa Econômica Federal"
+                class="logo-image"
+                width="40"
+                height="40"
+              />
             </div>
             <div class="nav-text">
               <h1 class="system-title">SILIC 2.0</h1>
@@ -21,7 +30,13 @@
             </div>
           </div>
           <div class="nav-actions">
-            <button id="voltarPortalBtn" class="btn-voltar-portal" type="button" onclick="voltarAoPortal()" aria-label="Voltar ao Portal de Imóveis">
+            <button
+              id="voltarPortalBtn"
+              class="btn-voltar-portal"
+              type="button"
+              onclick="voltarAoPortal()"
+              aria-label="Voltar ao Portal de Imóveis"
+            >
               Voltar ao Portal de Imóveis
             </button>
           </div>
@@ -29,19 +44,120 @@
       </nav>
     </header>
 
-  <main id="conteudo" class="main" tabindex="-1">
-      <div class="viewbar">
-        <div class="left">
-          <button id="viewReports" type="button" class="btn btn-ghost" aria-pressed="true">Relatórios</button>
-        </div>
-        <div class="right">
-          <span id="resultsInfo" class="results-info" aria-live="polite" role="status"></span>
-          <button id="btnMappedUnused" type="button" class="btn">Motivos mapeados em uso</button>
-        </div>
+    <main id="conteudo" class="main dashboard-main" tabindex="-1">
+      <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+
+      <div class="dashboard-shell">
+        <aside id="filtersDrawer" class="filters-drawer" aria-label="Filtros e navegação lateral">
+          <div class="filters-drawer-head">
+            <div>
+              <p class="filters-kicker">Painel lateral</p>
+              <h2>Filtros do catálogo</h2>
+              <p>Refine o conjunto exibido antes de abrir listas e relatórios detalhados.</p>
+            </div>
+            <button
+              id="closeFiltersBtn"
+              type="button"
+              class="btn btn-ghost icon-only"
+              aria-label="Fechar filtros"
+            >
+              ×
+            </button>
+          </div>
+
+          <div class="toolbar drawer-toolbar">
+            <label class="field-group field-search">
+              <span>Busca textual</span>
+              <input id="q" type="search" placeholder="Buscar motivo, descrição ou detalhe" />
+            </label>
+
+            <label class="field-group">
+              <span>Processo</span>
+              <select id="processo">
+                <option value="">Todos</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Etapa SILIC</span>
+              <select id="stepSilic">
+                <option value="">Todas</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Tipo</span>
+              <select id="tipo">
+                <option value="">Todos</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Situação</span>
+              <select id="situacao">
+                <option value="">Todas</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Categoria</span>
+              <select id="categoria">
+                <option value="">Todas</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="drawer-meta">
+            <span id="metaVersao" class="meta-versao"></span>
+          </div>
+        </aside>
+
+        <section class="dashboard-content">
+          <div class="viewbar">
+            <div class="left">
+              <button id="openFiltersBtn" type="button" class="btn btn-primary">Filtros</button>
+              <button id="viewReports" type="button" class="btn btn-ghost" aria-pressed="true">
+                Relatórios
+              </button>
+              <button id="viewSummary" type="button" class="btn btn-ghost" aria-pressed="false">
+                Resumo
+              </button>
+              <button id="viewList" type="button" class="btn btn-ghost" aria-pressed="false">
+                Lista
+              </button>
+            </div>
+            <div class="right">
+              <span id="resultsInfo" class="results-info" aria-live="polite" role="status"></span>
+              <button id="btnMappedUnused" type="button" class="btn">
+                Motivos mapeados em uso
+              </button>
+            </div>
+          </div>
+
+          <section id="dashboardKpis" class="dashboard-kpis" aria-label="Resumo rápido"></section>
+          <div id="activeChips" class="chips"></div>
+          <div class="grid" id="grid"></div>
+
+          <div id="pagination" class="pagination" hidden>
+            <div class="pagination-left">
+              <label>
+                <span class="sr-only">Itens por página</span>
+                <select id="pageSize">
+                  <option value="10">10 por página</option>
+                  <option value="20">20 por página</option>
+                  <option value="50">50 por página</option>
+                  <option value="all">Todos</option>
+                </select>
+              </label>
+            </div>
+            <div class="pagination-nav">
+              <button id="btnPrev" type="button" class="btn">Anterior</button>
+              <div id="pageNumbers" class="page-numbers"></div>
+              <button id="btnNext" type="button" class="btn">Próxima</button>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <div class="grid" id="grid"></div>
-
     </main>
 
     <footer class="app-footer" role="contentinfo">
@@ -60,6 +176,5 @@
     <!-- Apenas UM entrypoint; Vite cuidará do CSS importado no TS -->
     <script type="module" src="/src/main.ts"></script>
     <noscript>Este catálogo precisa de JavaScript para funcionar.</noscript>
-
   </body>
 </html>
